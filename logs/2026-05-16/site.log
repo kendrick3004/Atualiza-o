@@ -1,0 +1,1084 @@
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+📊 Visitas Total: 1 | Hoje: 1127.0.0.1 - - [16/May/2026 08:58:50] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /src/styles/modes.css HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /src/js/main/factory.js HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /pages/suite/weather/weather.css HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /pages/suite/suite.css HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /src/app/update.css HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /src/app/update.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /src/js/main/colors.js HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /pages/suite/weather/weather.js HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /pages/suite/suite.js HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:50] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:52] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:52] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:52] "GET /assets/dev/icons/diversos/WEATHER/sun%20rain.svg HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:52] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Day.svg HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:58:52] "GET /assets/dev/icons/diversos/WEATHER/sun%20clouds.svg HTTP/1.1" 304 -
+📊 Visitas Total: 2 | Hoje: 2127.0.0.1 - - [16/May/2026 08:58:56] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:58:56] "GET /pages/login/login-firebase.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:56] "GET /pages/login/login.css HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:58:56] "GET /src/js/main/config.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:58:56] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 304 -
+📊 Visitas Total: 3 | Hoje: 3127.0.0.1 - - [16/May/2026 08:59:00] "GET /login?redirect=/database HTTP/1.1" 200 -
+📊 Visitas Total: 4 | Hoje: 4127.0.0.1 - - [16/May/2026 08:59:07] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+📊 Visitas Total: 5 | Hoje: 5127.0.0.1 - - [16/May/2026 08:59:25] "GET /login?redirect=/database HTTP/1.1" 200 -
+📊 Visitas Total: 6 | Hoje: 6127.0.0.1 - - [16/May/2026 08:59:12] "GET /login HTTP/1.1" 200 -
+📊 Visitas Total: 7 | Hoje: 7127.0.0.1 - - [16/May/2026 08:59:15] "GET /login?redirect=/database HTTP/1.1" 200 -
+📊 Visitas Total: 8 | Hoje: 8127.0.0.1 - - [16/May/2026 08:59:17] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:59:22] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:59:22] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:59:22] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:59:22] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:59:22] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:59:22] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:59:22] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:59:22] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:59:22] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 08:59:22] "GET /src/js/main/auth-gate.js HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:59:23] "GET /database/philistudies.json?v=1778932778798 HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 08:59:23] "GET /favicon.ico HTTP/1.1" 204 -
+📊 Visitas Total: 10 | Hoje: 10127.0.0.1 - - [16/May/2026 09:00:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:00:11] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+📊 Visitas Total: 11 | Hoje: 11127.0.0.1 - - [16/May/2026 09:00:13] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+📊 Visitas Total: 12 | Hoje: 12127.0.0.1 - - [16/May/2026 09:00:18] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+📊 Visitas Total: 13 | Hoje: 13127.0.0.1 - - [16/May/2026 09:00:22] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+📊 Visitas Total: 14 | Hoje: 14127.0.0.1 - - [16/May/2026 09:00:29] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+📊 Visitas Total: 15 | Hoje: 15127.0.0.1 - - [16/May/2026 09:00:33] "GET /login?redirect=/database HTTP/1.1" 200 -
+📊 Visitas Total: 16 | Hoje: 16127.0.0.1 - - [16/May/2026 09:00:35] "GET /login?redirect=/database HTTP/1.1" 200 -
+📊 Visitas Total: 17 | Hoje: 17127.0.0.1 - - [16/May/2026 09:00:37] "GET /login?redirect=/database HTTP/1.1" 200 -
+📊 Visitas Total: 18 | Hoje: 18127.0.0.1 - - [16/May/2026 09:02:12] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /src/app/update.css HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /pages/suite/suite.css HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /src/app/update.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /src/styles/modes.css HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /pages/suite/weather/weather.css HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /pages/suite/weather/weather.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Day.svg HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /assets/dev/icons/diversos/WEATHER/Sun.svg HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:13] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:14] "GET /assets/dev/icons/diversos/WEATHER/sun%20clouds.svg HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:14] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Day.svg HTTP/1.1" 304 -
+📊 Visitas Total: 19 | Hoje: 19127.0.0.1 - - [16/May/2026 09:02:19] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:02:19] "GET /src/js/main/config.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:19] "GET /pages/login/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:19] "GET /pages/login/login-firebase.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:35] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 304 -
+📊 Visitas Total: 20 | Hoje: 20127.0.0.1 - - [16/May/2026 09:02:33] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:02:33] "GET /pages/calendar/calendar.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:02:33] "GET /pages/calendar/calendar.css HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:02:33] "GET /src/js/main/auth-gate.js HTTP/1.1" 304 -
+📊 Visitas Total: 21 | Hoje: 21127.0.0.1 - - [16/May/2026 09:02:36] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:02:37] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+📊 Visitas Total: 22 | Hoje: 22127.0.0.1 - - [16/May/2026 09:02:39] "GET /calendar HTTP/1.1" 200 -
+📊 Visitas Total: 23 | Hoje: 23127.0.0.1 - - [16/May/2026 09:03:13] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:03:13] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:03:14] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:03:14] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:03:14] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:03:14] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:03:14] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:03:14] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:03:14] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:03:14] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:03:14] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:03:14] "GET /database/philistudies.json?v=1778932995345 HTTP/1.1" 200 -
+📊 Visitas Total: 25 | Hoje: 25127.0.0.1 - - [16/May/2026 09:03:19] "GET /calendar HTTP/1.1" 200 -
+📊 Visitas Total: 26 | Hoje: 26127.0.0.1 - - [16/May/2026 09:03:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:03:21] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+📊 Visitas Total: 27 | Hoje: 27127.0.0.1 - - [16/May/2026 09:03:27] "GET /login HTTP/1.1" 200 -
+📊 Visitas Total: 28 | Hoje: 28127.0.0.1 - - [16/May/2026 09:03:53] "GET /calendar HTTP/1.1" 200 -
+📊 Visitas Total: 29 | Hoje: 29127.0.0.1 - - [16/May/2026 09:04:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:11] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+📊 Visitas Total: 30 | Hoje: 30127.0.0.1 - - [16/May/2026 09:04:13] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:15] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:30] "GET /database/philistudies.json?v=1778933055771 HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:33] "GET /database/files/skills/01_Database_Introducao_e_Sistemas_Gerenciadores_SGBD.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:36] "GET /database/files/skills/01_Introducao_e_Conceitos.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/02_Modelagem_Relacional_Entidades_Atributos_e_Relacionamentos.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/02_Service_Workers_e_Cache.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/02_Service_Workers_Fundamentos_e_Ciclo_de_Vida.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/03_Manifest_e_Instalacao.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/03_Manifest_Web_App_Configuracao_e_Propriedades.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/03_Normalizacao_de_Dados_1NF_2NF_3NF_e_BCNF.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/04_Algebra_Relacional_e_Fundamentos_Teoricos_do_SQL.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/04_Capacidades_Nativas_e_TWA.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/04_Estrategias_de_Cache_com_Service_Workers.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/05_Offline_Fallback_e_Experiencia_do_Usuario.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/05_Otimizacao_e_Performance.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/05_Tipos_de_Dados_SQL_e_Restricoes_Constraints.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/06_Linguagem_de_Definicao_de_Dados_DDL_Create_Alter_Drop.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/06_Notificacoes_Push_e_Engajamento.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/07_Linguagem_de_Manipulacao_de_Dados_DML_Insert_Update_Delete.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:37] "GET /database/files/skills/07_Sincronizacao_em_Segundo_Plano_Background_Sync.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/08_Capacidades_Nativas_e_Project_Fugu.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/08_Consultas_Avancadas_com_SELECT_Joins_e_Subqueries.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/09_Funcoes_de_Agregacao_e_Agrupamento_GROUP_BY_HAVING.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/09_Trusted_Web_Activities_TWA_e_Google_Play_Store.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/10_Otimizacao_de_Performance_e_Core_Web_Vitals.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/10_Views_e_Views_Materializadas_Estrategias_de_Abstracao.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/11_App_Shell_Model_e_Carregamento_Instantaneo.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/11_Indexacao_B-Tree_Hash_e_Estrategias_de_Busca.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/12_Planos_de_Execucao_Explain_Plan_e_Otimizacao_de_Queries.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/12_Web_Push_Protocol_e_VAPID.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/13_Transacoes_ACID_Atomicidade_Consistencia_Isolamento_Durabilidade.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/13_Web_Share_API_e_Web_Share_Target_API.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/14_Controle_de_Concorrencia_Locks_e_Niveis_de_Isolamento.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/14_WebAPK_e_Instalacao_Aprimorada.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/15_Gerenciamento_de_Credenciais_e_WebAuthn.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:38] "GET /database/files/skills/15_Stored_Procedures_e_Functions_Logica_no_Banco_de_Dados.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/16_Media_Capabilities_API_e_Reproducao_Otimizada.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/16_Triggers_e_Automacao_de_Eventos_no_Banco.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/17_Particionamento_de_Tabelas_e_Sharding_Horizontal.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/17_Web_Bluetooth_API_e_Interacao_com_Hardware.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/18_Replicacao_de_Dados_Master-Slave_e_Multi-Master.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/18_Web_USB_API_e_Conectividade_com_Dispositivos_USB.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/19_Backup_e_Recuperacao_Disaster_Recovery_Estrategias.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/19_Web_Serial_API_e_Comunicacao_Serial.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/20_Seguranca_e_Controle_de_Acesso_RBAC_e_Criptografia.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/20_Web_Payment_API_e_Experiencia_de_Pagamento.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/21_Introducao_ao_NoSQL_Teorema_CAP_e_Eventual_Consistency.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/21_WebXR_Device_API_e_Realidade_Aumentada_Virtual.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/22_Bancos_de_Dados_Documentais_MongoDB_e_CouchDB.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/22_Web_NFC_API_e_Interacao_com_Tags_NFC.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/23_Bancos_de_Dados_Chave-Valor_Redis_e_DynamoDB.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/23_Web_Share_API_e_Web_Share_Target_API_para_Compartilhamento.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/24_Background_Fetch_API_e_Download_de_Grandes_Arquivos.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:39] "GET /database/files/skills/24_Bancos_de_Dados_Colunares_Cassandra_e_HBase.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:40] "GET /database/files/skills/25_Bancos_de_Dados_de_Grafos_Neo4j_e_JanusGraph.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:40] "GET /database/files/skills/25_Performance_Monitoring_e_Analytics.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/26_Web_Assembly_e_Performance_Critica.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/27_Web_Workers_e_Multithreading.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/28_IndexedDB_API_e_Armazenamento_de_Dados_Offline.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/29_File_System_Access_API_e_Gerenciamento_de_Arquivos_Locais.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:40] "GET /database/files/skills/30_Distribuicao_e_Otimizacao_para_Android_Play_Store.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:40] "GET /database/files/skills/acceptance-criteria.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:40] "GET /database/files/skills/acceptance-criteria_139896433.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:40] "GET /database/files/skills/active-record.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:40] "GET /database/files/skills/active-record_927833612.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:40] "GET /database/files/skills/adr-template.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:40] "GET /database/files/skills/adr-template_820636874.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:40] "GET /database/files/skills/advanced-types.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:40] "GET /database/files/skills/advanced-types_1757952806.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/ADVANCED_LAYOUTS.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/aggregation-groupby.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/aggregation-groupby_1779882821.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/alerting-rules.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/alerting-rules_641741248.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/alternatives.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/alternatives_2146275812.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/analysis-checklist.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/analysis-checklist_1588888000.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/analysis-process.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/analysis-process_1238865158.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/android-compose.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/android-compose_1378053010.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/android_considerations.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/apex-development.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:41] "GET /database/files/skills/apex-development_285649926.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/api-design-standards.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/api-design-standards_1150838309.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/api-development.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/api-development_1770676595.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/api-docs-fastapi-django.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/api-docs-fastapi-django_1075706200.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/api-docs-nestjs-express.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/api-docs-nestjs-express_582736198.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/api-mocking.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/api-mocking_1605691598.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/app-development.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/app-development_1997204362.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/app-router.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/app-router_674389595.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/application-profiling.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/application-profiling_1589176710.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:42] "GET /database/files/skills/architecture-decisions.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/architecture-decisions_983096427.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/architecture-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/architecture-patterns_875567491.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/aspnet-core.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/aspnet-core_1706097410.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/async-concurrency.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/async-concurrency_750937876.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/async-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/async-patterns_1190986409.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/async-patterns_1310640983.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/async-patterns_1465394003.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/async-patterns_373187569.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/async-patterns_987320372.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/async-sqlalchemy.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/async-sqlalchemy_1174712748.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/async.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/async_1078930793.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:43] "GET /database/files/skills/authentication-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/authentication-patterns_1179867620.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/authentication.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/authentication_1388150851.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/authentication_1705087726.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/authentication_1727280180.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/authentication_1946544572.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/authentication_1977890985.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/authentication_1983392475.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/authentication_2105857672.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/authentication_229290185.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/authentication_947517124.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/automation-frameworks.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/automation-frameworks_1004731920.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/automation-toil.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/automation-toil_34620249.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/aws.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:44] "GET /database/files/skills/aws_641697331.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/azure.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/azure_1409628129.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/backend-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/backend-patterns_1993309908.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/background-jobs.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/background-jobs_1228838057.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/best-practices.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/best-practices_1552033699.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/blazor.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/blazor_533342847.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/bloc-state.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/bloc-state_1741472323.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/browser-apis.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/browser-apis_2042814982.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/build-tooling.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/build-tooling_1294651076.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/build-tooling_1759353269.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:45] "GET /database/files/skills/build-tooling_378387796.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/capacity-planning.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/capacity-planning_769101812.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/chaos-tools.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/chaos-tools_514909121.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/checkout-customization.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/checkout-customization_1803712822.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/chunking-strategies.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/chunking-strategies_355261533.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/clean-architecture.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/clean-architecture_670679831.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/cloud-native.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/cloud-native_1833331408.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/cloud.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/cloud_2048779463.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/COLOR_SYSTEM.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/common-issues.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:46] "GET /database/files/skills/common-issues_1359880878.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:47] "GET /database/files/skills/common-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:47] "GET /database/files/skills/common-patterns_1255756655.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:47] "GET /database/files/skills/common-patterns_490513536.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:47] "GET /database/files/skills/common-patterns_699753332.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:47] "GET /database/files/skills/common-workflows.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:47] "GET /database/files/skills/common-workflows_952279553.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:47] "GET /database/files/skills/communication-protocols.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:47] "GET /database/files/skills/communication-protocols_1596242671.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:47] "GET /database/files/skills/communication.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:47] "GET /database/files/skills/communication_21077709.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:47] "GET /database/files/skills/component-architecture.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:47] "GET /database/files/skills/component-architecture_1730466430.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/components.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/components_1397345581.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/components_398471626.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/components_810091184.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/composables-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/composables-patterns_491473219.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/composition-api.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/composition-api_1261698936.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/concurrency.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/concurrency_224191460.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/concurrency_656794033.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/concurrency_884012190.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/configuration.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/configuration_2064812287.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/configuration_2146200416.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/configuration_306671261.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:48] "GET /database/files/skills/configuration_601568232.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/configuration_885741800.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/confluence-operations.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/confluence-operations_213667111.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/context-management.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/context-management_452644499.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/controllers-routing.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/controllers-routing_1809884848.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/coroutines-flow.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/coroutines-flow_1458286103.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/cost-optimization.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/cost-optimization_1730285850.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/cost.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/cost_1225293069.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/coverage-reports.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/coverage-reports_721336845.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/CSS_ATOMIC_VISUAL_SYNAPSE.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/CSS_EXHAUSTIVE_GUIDE.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:49] "GET /database/files/skills/custom-operators.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:50] "GET /database/files/skills/custom-operators_227076265.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:50] "GET /database/files/skills/dashboards.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:50] "GET /database/files/skills/dashboards_155634068.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/data-cleaning.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/data-cleaning_317248529.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/data-fetching.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:50] "GET /database/files/skills/data-fetching_283811857.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:50] "GET /database/files/skills/data.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:50] "GET /database/files/skills/database-design.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:50] "GET /database/files/skills/database-design_1689439602.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:50] "GET /database/files/skills/database-selection.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:50] "GET /database/files/skills/database-selection_1568909039.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:50] "GET /database/files/skills/dataframe-operations.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:50] "GET /database/files/skills/dataframe-operations_930295023.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:50] "GET /database/files/skills/dataset-preparation.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:50] "GET /database/files/skills/dataset-preparation_1669019930.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/data_1061749480.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/data_1495070211.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/data_2092680642.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/debugging-flaky.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/debugging-flaky_1469295924.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/debugging-tools.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/debugging-tools_1991419966.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/decomposition.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/decomposition_1790437610.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/deliverables-checklist.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/deliverables-checklist_1453480113.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/deployment-devops.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/deployment-devops_455794191.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/deployment-optimization.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:51] "GET /database/files/skills/deployment-optimization_903414226.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/deployment-strategies.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/deployment-strategies_1544675725.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/deployment.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/deployment_1911171098.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/design-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/design-patterns_1450393561.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/design-template.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/design-template_1022639206.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/dialect-differences.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/dialect-differences_2045326517.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/dialectic-synthesis.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/dialectic-synthesis_1705409003.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/docker-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/docker-patterns_1789383352.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/documentation-systems.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/documentation-systems_1374854853.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/drf-serializers.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/drf-serializers_600258225.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/dsl-idioms.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:52] "GET /database/files/skills/dsl-idioms_495840981.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/dtos-validation.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/dtos-validation_45172643.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/e2e-testing.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/e2e-testing_1516977027.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/ears-format.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/ears-format_967112005.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/ears-syntax.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/ears-syntax_1684428379.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/ecs-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/ecs-patterns_1977356140.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/eloquent.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/eloquent_970951975.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/embedding-models.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/embedding-models_1249592723.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/endpoints-routing.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/endpoints-routing_878911381.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/entity-framework.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:53] "GET /database/files/skills/entity-framework_1343352478.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/entity-framework_865992938.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/entity-framework_867487613.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/error-budget-policy.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/error-budget-policy_559306994.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/error-handling.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/error-handling_1155315845.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/error-handling_1652721082.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/error-handling_1665096764.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/error-handling_1675436676.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/error-handling_226051722.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/evaluation-frameworks.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/evaluation-frameworks_2119623938.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/evaluation-metrics.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/evaluation-metrics_681778127.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/evidence-audit.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/evidence-audit_2010895865.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/experiment-design.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/experiment-design_20961371.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/experiment-tracking.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:54] "GET /database/files/skills/experiment-tracking_1091294088.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/expo-router.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/expo-router_1423518302.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/extensions.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/extensions_335154156.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/feature-engineering.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/feature-engineering_1289107355.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/federation.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/federation_1853035047.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/feedback-examples.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/feedback-examples_595669299.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/frontend-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/frontend-patterns_1753864570.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/game-days.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/game-days_489721086.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/gcp.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/gcp_170840102.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/generics.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/generics_1931698065.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:55] "GET /database/files/skills/github-actions.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/github-actions_21173130.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/gitops.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/gitops_785501070.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/go-cli.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/go-cli_344054048.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/gorouter-navigation.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/gorouter-navigation_1255942065.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/gutenberg-blocks.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/gutenberg-blocks_264240825.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/helm-charts.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/helm-charts_1509434806.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/hooks-filters.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/hooks-filters_705277012.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/hooks-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/hooks-patterns_295361030.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/hotwire-turbo.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/hotwire-turbo_618159996.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:56] "GET /database/files/skills/HTML_STRUCTURAL_SKELETON.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/hyperparameter-tuning.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/hyperparameter-tuning_1367455931.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/incident-chaos.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/incident-chaos_1395741782.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/incident-response.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/incident-response_676744672.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/index-strategies.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/index-strategies_450507950.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/infrastructure-chaos.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/infrastructure-chaos_1709501290.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/infrastructure-security.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/infrastructure-security_1369439839.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/input-validation.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/input-validation_722039956.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/integration-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/integration-patterns_1248252862.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/integration-patterns_1336689609.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/integration-patterns_777621503.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:57] "GET /database/files/skills/integration-testing.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/integration-testing_765878072.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/interactive-api-docs.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/interactive-api-docs_113659673.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/interfaces.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/interfaces_1492590674.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/interview-questions.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/interview-questions_1753767365.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/jira-queries.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/jira-queries_1712077072.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/jpa-optimization.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/jpa-optimization_1079018389.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/jsdoc-typing.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/jsdoc-typing_53765591.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/jsonb.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/jsonb_1752622485.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/JS_LOGIC_NEURAL_ENGINE.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/ktor-server.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/ktor-server_1369667533.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:58] "GET /database/files/skills/kubernetes-chaos.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/kubernetes-chaos_1915655099.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/kubernetes.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/kubernetes_1869360462.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/laravel-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/laravel-patterns_2088814852.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/legacy-testing.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/legacy-testing_1648206060.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/lightning-web-components.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/lightning-web-components_1590224676.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/LINUX_KERNEL_BASH_COMMANDS.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/liquid-templating.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/liquid-templating_1181015199.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/list-optimization.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/list-optimization_104528329.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/livewire.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/livewire_457669261.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/lora-peft.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/lora-peft_341371625.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:04:59] "GET /database/files/skills/MACOS_DARWIN_UNIX_COMMANDS.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/maintenance.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/maintenance_1791258993.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/manifest.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/mcp-server-setup.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/mcp-server-setup_577755612.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/memory-optimization.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/memory-optimization_875454562.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/memory-performance.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/memory-performance_2034092328.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/memory-performance_713084629.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/memory-performance_882602026.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/merging-joining.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/merging-joining_414209680.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/microcontroller-programming.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/microcontroller-programming_539820699.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/migration-class-to-modern.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/migration-class-to-modern_31708634.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:00] "GET /database/files/skills/migration-from-django.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/migration-from-django_1275366567.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/migration-from-express.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/migration-from-express_2041590249.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/migration-from-rest.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/migration-from-rest_308652959.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/migration-strategies.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/migration-strategies_1564290831.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/minimal-apis.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/minimal-apis_224118220.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/mobile-hybrid.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/mobile-hybrid_772507281.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/mode-selection-guide.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/mode-selection-guide_1740956545.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/model-validation.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/model-validation_456786122.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:01] "GET /database/files/skills/models-orm.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/models-orm_737961148.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/modern-cpp.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/modern-cpp_975718441.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/modern-csharp.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/modern-csharp_595013489.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/modern-php-features.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/modern-php-features_892477458.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/modern-syntax.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/modern-syntax_25229980.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/module-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/module-patterns_848843707.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/modules.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/modules_32011027.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/monitoring-alerting.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/monitoring-alerting_685201497.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/monitoring-analysis.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/monitoring-analysis_1141901859.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/multi-cloud.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:02] "GET /database/files/skills/multi-cloud_118198023.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/multi-cluster.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/multi-cluster_155599636.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/multiplatform-kmp.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/multiplatform-kmp_1828351524.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/multiplayer-networking.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/multiplayer-networking_2006399659.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/mysql-tuning.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/mysql-tuning_692350488.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/native_capabilities.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/networking.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/networking_1111330202.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/NEURALINK_CORE_MAP.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/nfr-checklist.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/nfr-checklist_1832102311.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/ngrx.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/ngrx_577434494.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/node-cli.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/node-cli_142199792.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/node-essentials.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:03] "GET /database/files/skills/node-essentials_1399172372.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/nosql_databases.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/nuxt.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/nuxt_912487454.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/observability.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/observability_1745301141.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/openapi.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/openapi_989764539.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/opentelemetry.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/opentelemetry_184127824.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/optimization.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/optimization_1636392281.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/optimization_795938501.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/orm_odm.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/OS_MULTI_PLATFORM_ARCHITECTURE.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/owasp-prevention.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/owasp-prevention_450382378.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/ownership.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:04] "GET /database/files/skills/ownership_35770058.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/packaging.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/packaging_811961486.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/page-object-model.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/page-object-model_1429904796.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/pagination.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/pagination_940722986.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/partitioning-caching.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/partitioning-caching_599796398.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/patterns_1019614639.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/patterns_1631466734.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/patterns_308439681.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/patterns_391523418.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/patterns_707202984.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/penetration-testing.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/penetration-testing_1894930768.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/performance-optimization.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:05] "GET /database/files/skills/performance-optimization_1477900271.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance-optimization_1694185102.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance-optimization_1786210154.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance-optimization_1811367749.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance-optimization_389294554.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance-security.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance-security_1221517456.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance-testing.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance-testing_1560108149.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance-testing_6396244.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance-testing_811355837.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance-tuning.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance-tuning_1031493553.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance_1439964124.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance_1705701623.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance_1858123072.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance_1947235329.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:06] "GET /database/files/skills/performance_40196649.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/performance_713475844.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/performance_848414443.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/pipeline-orchestration.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/pipeline-orchestration_448412563.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/platform-engineering.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/platform-engineering_1902308288.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/platform-handling.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/platform-handling_836843632.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/plugin-architecture.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/plugin-architecture_552298176.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/postgresql-tuning.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/postgresql-tuning_1516559347.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/power-optimization.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/power-optimization_522967562.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/pre-discovery-subagents.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/pre-discovery-subagents_2030411153.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/pre-mortem-analysis.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:07] "GET /database/files/skills/pre-mortem-analysis_720138018.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/project-structure.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/project-structure_100762263.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/project-structure_1112774462.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/project-structure_159240760.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/project-structure_610407635.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/project-structure_908733111.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/prometheus-metrics.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/prometheus-metrics_1096460132.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/Prompt%20para%20GeraÔö£┬║Ôö£├║o%20de%20Skills%20de%20ProgramaÔö£┬║Ôö£├║o%20para%20Treinamento%20de%20IA.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/prompt-optimization.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/prompt-optimization_927889154.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/prompt-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/prompt-patterns_769845017.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/protocol-oriented.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/protocol-oriented_1664950868.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/protocol.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/protocol_1455135098.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/protocol_30530494.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:08] "GET /database/files/skills/protocol_979977798.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/providers.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/providers_1685986004.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/pydantic-v2.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/pydantic-v2_647489592.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/python-cli.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/python-cli_1044409042.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/python-docstrings.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/python-docstrings_1876553538.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/python-sdk.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/python-sdk_1693034291.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/qa-methodology.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/qa-methodology_1377404745.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/query-optimization.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/query-optimization_733170036.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/query-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/query-patterns_1767208326.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/queues.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:09] "GET /database/files/skills/queues_761796396.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/quick-fixes.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/quick-fixes_2002293081.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/rag-evaluation.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/rag-evaluation_253326303.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:25] "GET /database/files/skills/rdd-operations.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:25] "GET /database/files/skills/rdd-operations_1693250338.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:26] "GET /database/files/skills/react-19-features.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/react-19-features_1935454989.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/reactive-webflux.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/reactive-webflux_1798868140.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/receiving-feedback.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/receiving-feedback_1608445841.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/red-team-adversarial.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/red-team-adversarial_604164835.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/refactoring-patterns.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:10] "GET /database/files/skills/refactoring-patterns_1625098145.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/release-automation.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/release-automation_822620998.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/replication.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/replication_759707048.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/report-template.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/report-template_1927610520.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/report-template_2082512815.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/report-template_2102166252.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/resolvers.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/resolvers_244166916.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/resources.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/resources_1316307292.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/rest-patterns.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/rest-patterns_227238652.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/retrieval-optimization.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/retrieval-optimization_1395079278.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:11] "GET /database/files/skills/review-checklist.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/review-checklist_1531093231.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/riverpod-state.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/riverpod-state_1389738534.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/routing.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/routing_1356893317.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/routing_1823841010.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/routing_1864907906.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/rspec-testing.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/rspec-testing_516562093.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/rtos-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/rtos-patterns_1905564367.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/rxjs.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/rxjs_56449223.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/sast-tools.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/sast-tools_486209281.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/scaling.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/scaling_209093278.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/schema-design.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/schema-design_1589281921.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:12] "GET /database/files/skills/secret-scanning.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/secret-scanning_1403243512.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/security-checklist.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/security-checklist_1917991736.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/security-headers.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/security-headers_854349446.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/security-testing.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/security-testing_519103241.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/security.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/security_1005619797.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/security_1137994241.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/security_1292159722.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/security_29672226.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/security_349532076.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/selectors-locators.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/selectors-locators_270708091.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/SEMANTIC_STRUCTURE.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/server-actions.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/server-actions_1546020472.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/server-components.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/server-components_1041337923.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:13] "GET /database/files/skills/server-components_2037886267.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/server-components_2076221966.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/service-mesh.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/service-mesh_1167457878.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/services-di.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/services-di_1149923242.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/service_workers.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_1037063218.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_1041111693.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_1071136327.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_1098061679.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_110403685.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_1145623083.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_1179000689.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_1213394427.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_1256687066.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_1258292712.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_1262336456.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_127849300.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_1286218628.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:14] "GET /database/files/skills/SKILL_1306294479.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1319574590.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1332286375.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1345976295.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1354838329.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:30] "GET /database/files/skills/SKILL_1365442079.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:30] "GET /database/files/skills/SKILL_1365665739.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:31] "GET /database/files/skills/SKILL_1427256614.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:31] "GET /database/files/skills/SKILL_1452674323.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1469628763.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1526505562.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1535949105.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1560574825.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_156205260.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1585060589.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1591691551.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1613275341.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1634100823.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_166933761.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1669859215.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:15] "GET /database/files/skills/SKILL_1677476719.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_169043522.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1690811880.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1705839332.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1712312713.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1728851712.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1731737367.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1735133986.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_176237250.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1762570046.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1764453067.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1776532812.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1794020287.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1796864596.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1838844142.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1839808820.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_18470346.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1872472821.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:16] "GET /database/files/skills/SKILL_1880657228.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_1881674701.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_1919242875.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_1933912084.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_1949985164.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_1960152555.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_1983108974.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_1996162280.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_2019567198.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_2033600649.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_2033918378.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_2039599643.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_2041632600.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_2049611819.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_2070695360.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_2108289405.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_2122528065.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_2123769112.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:17] "GET /database/files/skills/SKILL_215692066.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_231895130.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_234751934.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_251365251.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_254215184.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_268082326.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_26893283.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_269822181.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_284423276.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_291979791.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_304236466.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_314455902.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_315089598.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_320735350.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_339598566.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_349639783.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_377325552.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_381665776.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:18] "GET /database/files/skills/SKILL_381894775.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_392156045.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_393491767.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_42583736.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_429996756.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_457081302.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_4615292.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_481956901.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_507472818.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_508771447.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_514565527.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_535164004.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_566880081.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_577462665.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_593214988.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_599777815.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_600220802.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:19] "GET /database/files/skills/SKILL_613223628.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/SKILL_621648279.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/SKILL_655344800.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/SKILL_657319422.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/SKILL_660733189.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:35] "GET /database/files/skills/SKILL_690121797.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:35] "GET /database/files/skills/SKILL_738158021.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:36] "GET /database/files/skills/SKILL_741952898.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:36] "GET /database/files/skills/SKILL_744066671.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/SKILL_753099656.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/SKILL_789442652.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/SKILL_80273809.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/SKILL_823772319.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/SKILL_842642728.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/SKILL_85646365.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/SKILL_87956641.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:20] "GET /database/files/skills/SKILL_887407734.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/SKILL_887827398.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/SKILL_890994194.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/SKILL_911781998.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/SKILL_925881443.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/SKILL_92656710.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/SKILL_945611225.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/SKILL_958095110.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/SKILL_9613408.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/SKILL_964699183.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/SKILL_970608039.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/SKILL_972718807.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/SKILL_979422243.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/SKILL_996334300.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/slo-sli-management.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/slo-sli-management_1054333215.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/socratic-questioning.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:21] "GET /database/files/skills/socratic-questioning_751660292.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/soql-sosl.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/soql-sosl_1061474848.md HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/spark-sql-dataframes.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/spark-sql-dataframes_1067351414.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/spec-compliance-review.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/spec-compliance-review_435164654.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/specification-template.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/specification-template_1466724725.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/specification-template_1599687629.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/specification-template_282410845.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/spring-boot-setup.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/spring-boot-setup_1633078049.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/spring-security.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/spring-security_512984962.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/sql_fundamentals.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/standard-library.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/standard-library_164920900.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/state-management.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:22] "GET /database/files/skills/state-management_1039763347.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/state-management_1099804596.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/state-management_1183430370.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/state-management_1416795098.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/state-management_450431648.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/state-management_678019884.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/state-management_931642740.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/storage-hooks.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/storage-hooks_1353800556.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/storage.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/storage_1631231715.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/storefront-api.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/storefront-api_1386337449.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/strangler-fig-pattern.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/strangler-fig-pattern_1090173745.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/strategies.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/strategies_1726460249.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/streaming-patterns.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/streaming-patterns_1829364799.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/structured-logging.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/structured-logging_607946015.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:23] "GET /database/files/skills/structured-outputs.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:24] "GET /database/files/skills/structured-outputs_1369765006.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:24] "GET /database/files/skills/subscriptions.md HTTP/1.1" 429 -
+127.0.0.1 - - [16/May/2026 09:05:34] "GET /maintenance/429.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:34] "GET /maintenance/background.jpg HTTP/1.1" 304 -
+📊 Visitas Total: 212 | Hoje: 212127.0.0.1 - - [16/May/2026 09:05:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:46] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:05:50] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:05:50] "GET /database/philistudies.json?v=1778933151212 HTTP/1.1" 200 -
+Estrutura atualizada com sucesso.
+127.0.0.1 - - [16/May/2026 09:06:01] "POST /database/upload HTTP/1.1" 200 -
+Estrutura atualizada com sucesso.
+127.0.0.1 - - [16/May/2026 09:06:02] "POST /database/upload HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:06:02] "GET /database/philistudies.json?v=1778933163213 HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:06:03] "GET /database/files/Screenshot_20260514_194856_Instagram.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:06:03] "GET /database/files/Screenshot_20260515_144625_YouTube.jpg HTTP/1.1" 200 -
+Estrutura atualizada com sucesso.
+127.0.0.1 - - [16/May/2026 09:06:03] "POST /database/upload HTTP/1.1" 200 -
+Estrutura atualizada com sucesso.
+127.0.0.1 - - [16/May/2026 09:06:04] "POST /database/upload HTTP/1.1" 200 -
+Estrutura atualizada com sucesso.
+127.0.0.1 - - [16/May/2026 09:06:04] "POST /database/upload HTTP/1.1" 200 -
+Estrutura atualizada com sucesso.
+127.0.0.1 - - [16/May/2026 09:06:21] "POST /database/upload HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:06:05] "GET /database/philistudies.json?v=1778933166213 HTTP/1.1" 200 -
+Estrutura atualizada com sucesso.
+127.0.0.1 - - [16/May/2026 09:06:06] "POST /database/upload HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:06:06] "GET /database/files/Screenshot_20260502_105331_WhatsApp.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:06:06] "GET /database/files/Screenshot_20260509_102602_Instagram.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:06:06] "GET /database/files/Screenshot_20260513_121358_WhatsApp.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:06:06] "GET /database/files/Screenshot_20260513_182429_Drive.jpg HTTP/1.1" 200 -
+Estrutura atualizada com sucesso.
+127.0.0.1 - - [16/May/2026 09:06:06] "POST /database/upload HTTP/1.1" 200 -
+Estrutura atualizada com sucesso.
+127.0.0.1 - - [16/May/2026 09:06:06] "POST /database/upload HTTP/1.1" 200 -
+Estrutura atualizada com sucesso.
+127.0.0.1 - - [16/May/2026 09:06:07] "POST /database/upload HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:06:07] "GET /database/philistudies.json?v=1778933168317 HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:06:08] "GET /database/files/Screenshot_20260430_101154_Chrome.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:06:08] "GET /database/files/Screenshot_20260430_101145_Chrome.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:06:08] "GET /database/files/Screenshot_20260429_130318_Chrome.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:06:08] "GET /database/files/Screenshot_20260502_105325_WhatsApp.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:07:06] "GET /database HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:07:06] "GET /database/philistudies.json?v=1778933227445 HTTP/1.1" 200 -
+📊 Visitas Total: 225 | Hoje: 225127.0.0.1 - - [16/May/2026 09:12:02] "GET /login?redirect=/database HTTP/1.1" 200 -
+📊 Visitas Total: 226 | Hoje: 226127.0.0.1 - - [16/May/2026 09:12:04] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+📊 Visitas Total: 227 | Hoje: 227127.0.0.1 - - [16/May/2026 09:12:07] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+📊 Visitas Total: 228 | Hoje: 228127.0.0.1 - - [16/May/2026 09:12:16] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:12:16] "GET /pages/calendar/calendar.js HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:12:16] "GET /pages/calendar/calendar.css HTTP/1.1" 304 -
+127.0.0.1 - - [16/May/2026 09:12:35] "GET /database HTTP/1.1" 200 -
+📊 Visitas Total: 230 | Hoje: 230127.0.0.1 - - [16/May/2026 09:12:35] "GET /calendar HTTP/1.1" 200 -
+📊 Visitas Total: 231 | Hoje: 231127.0.0.1 - - [16/May/2026 09:12:35] "GET /calendar HTTP/1.1" 200 -
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+📊 Visitas Total: 1 | Hoje: 1127.0.0.1 - - [16/May/2026 09:17:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:15] "GET /assets/dev/favicon/icon-192.png HTTP/1.1" 304 -
+📊 Visitas Total: 2 | Hoje: 2127.0.0.1 - - [16/May/2026 09:17:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:21] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 3 | Hoje: 3127.0.0.1 - - [16/May/2026 09:17:21] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 4 | Hoje: 4127.0.0.1 - - [16/May/2026 09:17:22] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:22] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 5 | Hoje: 5127.0.0.1 - - [16/May/2026 09:17:22] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 6 | Hoje: 6127.0.0.1 - - [16/May/2026 09:17:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:23] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 7 | Hoje: 7127.0.0.1 - - [16/May/2026 09:17:23] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 8 | Hoje: 8127.0.0.1 - - [16/May/2026 09:17:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:24] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 9 | Hoje: 9127.0.0.1 - - [16/May/2026 09:17:24] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 10 | Hoje: 10127.0.0.1 - - [16/May/2026 09:17:25] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:25] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 11 | Hoje: 11127.0.0.1 - - [16/May/2026 09:17:25] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 12 | Hoje: 12127.0.0.1 - - [16/May/2026 09:17:26] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:26] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 13 | Hoje: 13127.0.0.1 - - [16/May/2026 09:17:42] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 14 | Hoje: 14127.0.0.1 - - [16/May/2026 09:17:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:27] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 15 | Hoje: 15127.0.0.1 - - [16/May/2026 09:17:27] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 16 | Hoje: 16127.0.0.1 - - [16/May/2026 09:17:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:28] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 17 | Hoje: 17127.0.0.1 - - [16/May/2026 09:17:28] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 18 | Hoje: 18127.0.0.1 - - [16/May/2026 09:17:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:28] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 19 | Hoje: 19127.0.0.1 - - [16/May/2026 09:17:28] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 20 | Hoje: 20127.0.0.1 - - [16/May/2026 09:17:29] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:29] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 21 | Hoje: 21127.0.0.1 - - [16/May/2026 09:17:29] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 22 | Hoje: 22127.0.0.1 - - [16/May/2026 09:17:30] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:30] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 23 | Hoje: 23127.0.0.1 - - [16/May/2026 09:17:30] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:47] "GET /database HTTP/1.1" 302 -
+📊 Visitas Total: 25 | Hoje: 25127.0.0.1 - - [16/May/2026 09:17:47] "GET /login?redirect=/database? HTTP/1.1" 200 -
+📊 Visitas Total: 26 | Hoje: 26127.0.0.1 - - [16/May/2026 09:17:33] "GET /calendar HTTP/1.1" 200 -
+📊 Visitas Total: 27 | Hoje: 27127.0.0.1 - - [16/May/2026 09:17:55] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:17:56] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 28 | Hoje: 28127.0.0.1 - - [16/May/2026 09:17:56] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 29 | Hoje: 29127.0.0.1 - - [16/May/2026 09:17:57] "GET /login?redirect=/database HTTP/1.1" 200 -
+📊 Visitas Total: 30 | Hoje: 30127.0.0.1 - - [16/May/2026 09:17:58] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:19:12] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 31 | Hoje: 31127.0.0.1 - - [16/May/2026 09:18:56] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 32 | Hoje: 32127.0.0.1 - - [16/May/2026 09:19:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:19:09] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 33 | Hoje: 33127.0.0.1 - - [16/May/2026 09:19:09] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 34 | Hoje: 34127.0.0.1 - - [16/May/2026 09:19:10] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:19:10] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 35 | Hoje: 35127.0.0.1 - - [16/May/2026 09:19:10] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 36 | Hoje: 36127.0.0.1 - - [16/May/2026 09:19:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:19:27] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 37 | Hoje: 37127.0.0.1 - - [16/May/2026 09:19:27] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 38 | Hoje: 38127.0.0.1 - - [16/May/2026 09:19:12] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/May/2026 09:19:12] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 302 -
+📊 Visitas Total: 39 | Hoje: 39127.0.0.1 - - [16/May/2026 09:19:12] "GET /login?redirect=/database/files/dev/DATA/calendario.json? HTTP/1.1" 200 -
+📊 Visitas Total: 40 | Hoje: 40127.0.0.1 - - [16/May/2026 09:19:13] "GET /login?redirect=/calendar HTTP/1.1" 200 -

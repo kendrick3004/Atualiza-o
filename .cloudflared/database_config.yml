@@ -1,0 +1,7 @@
+tunnel: <TUNNEL_ID_DATABASE>
+credentials-file: /home/ubuntu/.cloudflared/<TUNNEL_ID_DATABASE>.json
+
+ingress:
+  - hostname: database.kendricknicoleti.com
+    service: http://localhost:5000
+  - service: http_status:404

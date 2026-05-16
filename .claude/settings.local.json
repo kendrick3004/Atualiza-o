@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python *)",
+      "Bash(curl -s http://localhost:5000/database/philistudies.json)",
+      "Bash(python3 *)",
+      "Bash(ls *)",
+      "Bash(dir *)"
+    ]
+  }
+}
