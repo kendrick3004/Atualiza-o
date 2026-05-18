@@ -97,7 +97,7 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
     log "📊 Iniciando clonagem..."
     
     # 🎯 BARRINHA + % + VELOCIDADE - SÓ UMA LINHA LIMPA!
-   timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/index.git . >> "$GIT_LOG" 2>&1 &
+   timeout 600 git clone --depth=1 --single-branch --branch main --progress https://github.com/kendrick3004/Atualiza-o.git . >> "$GIT_LOG" 2>&1 &
     GIT_PID=$!
     
     while kill -0 $GIT_PID 2>/dev/null; do
