@@ -2,7 +2,7 @@
  * ARQUIVO: suite.js
  * DESCRIÇÃO: Gerenciamento de temas, interações e persistência de estado offline.
  * FUNCIONALIDADES: Alternância de tema, Easter Egg e persistência de sessão para recarregamento offline.
- * VERSÃO: 2.3.0 - Resiliência Offline e Persistência de Sessão
+ * VERSÃO: 2.3.1 - Acesso Público ao Calendário Corrigido
  */
 
 const SuiteModule = (function() {
@@ -121,34 +121,13 @@ const SuiteModule = (function() {
 
     function checkEasterEgg() {
         // Easter Egg desativado temporariamente
-        // if (state.darkModeToggleCount >= 2 && !state.isLoginRevealed) {
-        //     revealLoginButton();
-        // }
     }
 
     /**
      * Revela o botão de login e atualiza o estado.
      */
     function revealLoginButton(isRestoring = false) {
-        const linksContainer = document.querySelector('.links');
-        
-    //    if (linksContainer && !document.querySelector('.link-item.login')) {
-    //        const loginButton = document.createElement('div');
-    //        loginButton.className = 'link-item login';
-    //        loginButton.textContent = 'Login';
-    //        
-    //        loginButton.addEventListener('click', () => {
-    //            window.location.href = 'pages';
-    //        });
-    //        
-    //        linksContainer.appendChild(loginButton);
-    //        state.isLoginRevealed = true;
-    //        
-    //        if (!isRestoring) {
-    //            saveState();
-    //            console.log('[Suite] Easter Egg ativado: Botão de Login revelado!');
-    //        }
-    //    }
+        // Implementação removida conforme solicitado
     }
 
     /**
@@ -189,24 +168,16 @@ const SuiteModule = (function() {
             return;
         }
 
-        // Encontra o link do Calendário
+        // Encontra o link do Calendário - ACESSO PÚBLICO (v2.3.1)
         const calendarLink = document.querySelector('a[href="/calendar"]');
         if (calendarLink) {
             calendarLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.firebaseAuth.onAuthStateChanged(user => {
-                    if (!user) {
-                        // Não autenticado: redireciona para login com destino
-                        window.location.href = '/login?redirect=' + encodeURIComponent('/calendar');
-                    } else {
-                        // Autenticado: vai para o calendário
-                        window.location.href = '/calendar';
-                    }
-                });
+                // Não interceptar: o calendário agora é público
+                console.log('[Suite] Navegando para o calendário (acesso público)');
             });
         }
 
-        // Encontra o link do Database
+        // Encontra o link do Database - REQUER LOGIN
         const databaseLink = document.querySelector('a[href="/database"]');
         if (databaseLink) {
             databaseLink.addEventListener('click', (e) => {

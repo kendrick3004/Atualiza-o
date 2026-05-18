@@ -42,3 +42,48 @@ Press CTRL+C to quit
 [09:17:11] 🚧 Acesso em Manutenção: 127.0.0.1 -> /
 127.0.0.1 - - [16/May/2026 09:17:11] "GET / HTTP/1.1" 200 -
 127.0.0.1 - - [16/May/2026 09:17:11] "GET /maintenance/error-pages.css HTTP/1.1" 304 -
+[09:37:22] --- Modo Manutenção Iniciado ---
+🚧 Modo Manutenção ATIVO na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+[11:51:29] --- Modo Manutenção Iniciado ---
+🚧 Modo Manutenção ATIVO na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+[11:58:22] --- Modo Manutenção Iniciado ---
+🚧 Modo Manutenção ATIVO na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+[13:16:50] --- Modo Manutenção Iniciado ---
+🚧 Modo Manutenção ATIVO na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+[13:17:10] --- Modo Manutenção Iniciado ---
+🚧 Modo Manutenção ATIVO na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit

@@ -150,9 +150,14 @@ function createMonthElement(date) {
         
         dayElement.appendChild(barsContainer);
         
-        // Adicionar tooltip
+        // Adicionar tooltip e classe 'complete' se todas as orações foram feitas
         const progress = getDayProgress(dateStr);
         dayElement.title = `${progress.completed}/${progress.total} orações`;
+        
+        // Se todas as 4 orações foram feitas, adicionar borda verde
+        if (progress.completed === progress.total && progress.total > 0) {
+            dayElement.classList.add('complete');
+        }
         
         daysGrid.appendChild(dayElement);
     }

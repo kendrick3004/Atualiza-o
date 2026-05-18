@@ -13,6 +13,12 @@
             return;
         }
 
+        // O calendário não requer autenticação - permitir acesso livre
+        if (window.location.pathname.includes('/calendar')) {
+            console.log('[auth-gate] Calendário acessado - sem requerer autenticação');
+            return;
+        }
+
         window.firebaseAuth.onAuthStateChanged(user => {
             const now = Date.now();
             const authTimestamp = localStorage.getItem('auth_timestamp');
@@ -53,8 +59,11 @@
         const currentPath = window.location.pathname + window.location.search;
         const loginUrl = "/login?redirect=" + encodeURIComponent(currentPath);
         
-        // Evita loop se já estiver na página de login ou na Suite (que gerencia sua própria autenticação)
-        if (!window.location.pathname.includes('/login') && window.location.pathname !== '/') {
+        // Evita loop se já estiver na página de login, na Suite ou no Calendário (que gerencia sua própria autenticação)
+        // O calendário permite acesso sem login - o usuário pode clicar em "Conectar" se desejar
+        if (!window.location.pathname.includes('/login') && 
+            !window.location.pathname.includes('/calendar') && 
+            window.location.pathname !== '/') {
             window.location.href = loginUrl;
         }
     }

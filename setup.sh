@@ -17,8 +17,9 @@ log "[1/3] Atualizando pacotes do sistema..."
 sudo apt update
 
 # Instala pacotes do sistema solicitados e essenciais
-log "[2/3] Instalando pacotes base (nano, curl, wget, openssh-server, net-tools, git, python3, python3-pip)..."
-sudo apt install -y nano curl wget openssh-server net-tools git python3 python3-pip python3-venv 
+# Os pacotes do sistema (nano, curl, wget, openssh-server, net-tools, git, python3, python3-pip, python3-venv) devem ser instalados manualmente antes de executar este script.
+log "[2/3] Instalando pacotes do sistema solicitados e essenciais"
+sudo apt install -y nano curl wget openssh-server net-tools git python3 python3-pip python3-venv
 
 log "[3/3] Configurando o Cloudflared Tunnel (Persistente)"
 # Add cloudflare gpg key

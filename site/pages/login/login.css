@@ -31,14 +31,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
-}
-
-/* Correção para mobile: background-attachment: scroll */
-@media (max-width: 1024px) {
-    body {
-        background-attachment: scroll !important;
-    }
+    background-attachment: fixed;
+    background-color: #000;
 }
 
 .login-container {

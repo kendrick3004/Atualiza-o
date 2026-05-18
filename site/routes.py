@@ -149,7 +149,7 @@ def register_routes(app, config):
     @app.route('/database/download-zip', methods=['POST'])
     @require_auth
     def download_zip():
-        """Compacta arquivos/pastas no servidor e retorna ZIP"""
+        """Compacta arquivos/pastas no servidor e retorna ZIP via streaming (sem salvar no disco)"""
         try:
             data = request.get_json()
             paths = data.get('paths', [])
@@ -157,39 +157,49 @@ def register_routes(app, config):
             if not paths:
                 return jsonify({"error": "Nenhum caminho fornecido"}), 400
             
-            # Criar ZIP em memoria
+            # Criar ZIP em memória (BytesIO) para evitar escrita em disco permanente
             zip_buffer = BytesIO()
             
             with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
                 for path in paths:
                     # Sanitizar caminho para evitar path traversal
+                    # O frontend envia caminhos relativos ao DATABASE_DIR
                     safe_path = os.path.normpath(path)
                     if safe_path.startswith('..'):
                         continue
                     
                     full_path = os.path.join(DATABASE_DIR, safe_path)
                     real_database = os.path.realpath(os.path.normpath(DATABASE_DIR))
-                    real_path = os.path.realpath(full_path)
                     
-                    # Verificar se o caminho esta dentro de DATABASE_DIR
+                    # Verificar se o caminho existe e está dentro de DATABASE_DIR
+                    if not os.path.exists(full_path):
+                        continue
+                        
+                    real_path = os.path.realpath(full_path)
                     if not real_path.startswith(real_database):
                         continue
                     
                     if os.path.isfile(full_path):
-                        # Adicionar arquivo
+                        # Adicionar arquivo individual
                         arcname = os.path.basename(full_path)
                         zip_file.write(full_path, arcname=arcname)
                     elif os.path.isdir(full_path):
-                        # Adicionar pasta recursivamente
+                        # Adicionar pasta inteira recursivamente
                         for root, dirs, files in os.walk(full_path):
                             for file in files:
                                 file_path = os.path.join(root, file)
-                                arcname = os.path.relpath(file_path, full_path)
-                                zip_file.write(file_path, arcname=os.path.join(os.path.basename(full_path), arcname))
+                                # Calcula o caminho relativo para manter a estrutura dentro do ZIP
+                                arcname = os.path.relpath(file_path, os.path.dirname(full_path))
+                                zip_file.write(file_path, arcname=arcname)
             
+            # Reposiciona o ponteiro para o início do buffer
             zip_buffer.seek(0)
-            registrar_log(f"📦 Download ZIP gerado: {len(paths)} item(s)", log_type='database')
             
+            # Registrar apenas no log que o ZIP foi gerado
+            client_ip = request.remote_addr
+            registrar_log(f"📦 [ZIP] Servidor gerou e enviou pacote com {len(paths)} item(s) para {client_ip}", log_type='database')
+            
+            # Envia o arquivo diretamente da memória
             return send_file(
                 zip_buffer,
                 mimetype='application/zip',
@@ -198,7 +208,7 @@ def register_routes(app, config):
             )
         
         except Exception as e:
-            registrar_log(f"❌ Erro ao gerar ZIP: {e}", log_type='database')
+            registrar_log(f"❌ Erro ao processar ZIP no servidor: {e}", log_type='database')
             return jsonify({"error": str(e)}), 500
 
     # --- Rotas de Manutenção e Estáticos ---

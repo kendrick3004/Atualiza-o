@@ -2,91 +2,64 @@
  * ARQUIVO: modes.css
  * DESCRIÇÃO: Gerencia os planos de fundo e estilos específicos para os modos Claro e Escuro.
  * FUNCIONALIDADES: Define as imagens de fundo dinâmicas e garante a consistência visual do layout.
- * VERSÃO: 2.2.0 - Correção Definitiva de Background Mobile (iOS Safari + Chrome Android)
+ * VERSÃO: 2.3.0 - Fundo Fixo Universal (Desktop & Mobile)
  *
- * PROBLEMA CORRIGIDO:
- * O `background-attachment: fixed` é amplamente ignorado ou mal suportado em navegadores
- * móveis (iOS Safari, Chrome Android). Isso fazia com que a imagem de fundo não aparecesse
- * no mobile. A solução é usar `background-attachment: scroll` para mobile via media query,
- * garantindo que a regra sobrescreva os seletores de maior especificidade.
+ * SOLUÇÃO APLICADA:
+ * Para garantir que o fundo fique fixo em mobile (onde background-attachment: fixed falha),
+ * usamos um pseudo-elemento ::before no body com position: fixed. Isso cria uma camada
+ * de fundo que não se move com o scroll da página.
  */
 
-/* ============================================================
-   CONFIGURAÇÕES GLOBAIS DO CORPO (BODY)
-   Propriedades base que se aplicam a ambos os modos.
-   Definidas ANTES dos seletores de tema para permitir herança.
-   ============================================================ */
 html {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     min-height: 100%;
-    min-height: 100dvh;                           /* Dynamic Viewport Height — mais preciso em mobile */
+    min-height: 100dvh;
+    margin: 0;
+    padding: 0;
     overflow-y: auto;
     overflow-x: hidden;
+    background: none !important; /* Remove background direto do body */
+}
+
+/* Pseudo-elemento para o fundo fixo */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Fica atrás de todo o conteúdo */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;                 /* Desktop: fundo fixo ao rolar */
+    pointer-events: none; /* Não interfere nos cliques */
 }
 
 /* ============================================================
    MODO CLARO (LIGHT MODE)
-   Aplicado quando o body NÃO possui a classe .dark-mode.
    ============================================================ */
-body:not(.dark-mode) {
+body:not(.dark-mode)::before {
     background-image: url("/assets/dev/templates/light_mode.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 /* ============================================================
    MODO ESCURO (DARK MODE)
-   Aplicado quando o body possui a classe .dark-mode.
    ============================================================ */
-body.dark-mode {
+body.dark-mode::before {
     background-image: url("/assets/dev/templates/dark_mode.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
-/* ============================================================
-   CORREÇÃO MOBILE — TODOS OS BREAKPOINTS
-   
-   O `background-attachment: fixed` é o culpado no mobile.
-   Em iOS Safari e Chrome Android, ele causa:
-     1. A imagem de fundo não ser renderizada (aparece só a cor de fundo)
-     2. Comportamento de parallax quebrado
-     3. Repaint excessivo causando travamentos
-   
-   SOLUÇÃO: Sobrescrever com `scroll` em mobile usando !important
-   para garantir que vença a especificidade dos seletores acima.
-   ============================================================ */
-
-/* ============================================================
-   CORREÇÃO MOBILE — BACKGROUND ATTACHMENT
-   
-   O `background-attachment: fixed` é amplamente ignorado em navegadores
-   mobile (iOS Safari, Chrome Android), causando que a imagem de fundo
-   não apareça ou desapareça ao rolar. A solução é usar `scroll` em mobile.
-   ============================================================ */
-
-@media (max-width: 1024px) {
-    body {
-        background-attachment: scroll !important;
-    }
-}
-
-/* Garantir que a imagem de fundo apareça com força máxima */
-body.dark-mode {
+/* Garantir que a imagem de fundo apareça com prioridade */
+body.dark-mode::before {
     background-image: url("/assets/dev/templates/dark_mode.jpg") !important;
 }
 
-body:not(.dark-mode) {
+body:not(.dark-mode)::before {
     background-image: url("/assets/dev/templates/light_mode.jpg") !important;
 }

@@ -486,9 +486,7 @@ body.dark-mode .liturgy-card {
 
 /* Modo escuro */
 body.dark-mode .prayer-item {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.02));
-    border-color: var(--accent-gold, #ffd700);
-}
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.02));}
 
 body.dark-mode .prayer-item:hover {
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.05));
