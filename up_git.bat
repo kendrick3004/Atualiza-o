@@ -5,11 +5,11 @@ echo ============================================
 echo Atualizacao de arquivos em andamento...
 echo ============================================
 
-:: Cria .gitkeep em pastas vazias
+:: Adiciona .gitkeep em pastas realmente vazias
 for /f "delims=" %%d in ('dir /ad /b /s') do (
-    dir /a /b "%%d" >nul 2>&1
+    dir /a /b "%%d" | findstr /v /c:".gitkeep" >nul
     if errorlevel 1 (
-        type nul > "%%d\.gitkeep"
+        echo.> "%%d\.gitkeep"
     )
 )
 
