@@ -26,6 +26,9 @@ BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 LOG_BASE_DIR = os.path.join(BASE_DIR, 'logs')
 MAINTENANCE_DIR = os.path.join(BASE_DIR, 'maintenance')
+TEMP_DIR = os.path.join(BASE_DIR, '.temp')
+ZIP_DIR = os.path.join(TEMP_DIR, '.zip')
+REPO_DIR = os.path.join(TEMP_DIR, '.repo')
 DATABASE_DIR = os.path.join(BASE_DIR, 'database')
 UPLOAD_FOLDER = os.path.join(DATABASE_DIR, 'files')
 
@@ -40,6 +43,13 @@ def get_log_file(log_type='site'):
     return os.path.join(dia_dir, 'site_access.log')
 
 def registrar_log(mensagem, log_type='site'):
+    """
+    Registers a log message in the daily log file.
+    
+    Args:
+        mensagem (str): The message to be logged.
+        log_type (str): The category of the log ('site' or 'database').
+    """
     try:
         with open(get_log_file(log_type), 'a', encoding='utf-8') as f:
             timestamp = datetime.datetime.now().strftime('%H:%M:%S')
@@ -48,12 +58,24 @@ def registrar_log(mensagem, log_type='site'):
         print(f"Erro ao salvar log: {e}")
 
 def atualizar_linha():
+    """
+    Updates the console output and logs the current visit statistics.
+    """
     log_msg = f"📊 Visitas Total: {visitas_total} | Hoje: {visitas_hoje}"
     sys.stdout.write(f"\r{log_msg}")
     sys.stdout.flush()
     registrar_log(log_msg)
 
 def generate_structure_json(specific_file=None):
+    """
+    Executes the external script to generate or update the database structure JSON.
+    
+    Args:
+        specific_file (str, optional): Path to a specific file for incremental update.
+        
+    Returns:
+        bool: True if successful, False otherwise.
+    """
     try:
         script_path = os.path.join(DATABASE_DIR, 'generate_assets_structure.py')
         cmd = [sys.executable, script_path]
@@ -84,9 +106,11 @@ def security_and_tracking():
         '.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.svg', 
         '.woff', '.woff2', '.ttf', '.otf', '.json', '.map', '.ico'
     )
+    # Melhoria: usar caminhos que começam com a pasta para evitar falsos positivos
     pastas_ignoradas = ('/assets/', '/css/', '/js/', '/img/', '/src/', '/maintenance/')
     
-    if request.path.endswith(extensoes_ignoradas) or any(p in request.path for p in pastas_ignoradas):
+    # Verifica se termina com extensão ignorada ou se o caminho começa com uma das pastas ignoradas
+    if request.path.endswith(extensoes_ignoradas) or any(request.path.startswith(p) for p in pastas_ignoradas):
         return
 
     client_ip = request.remote_addr
@@ -107,18 +131,24 @@ def security_and_tracking():
     visitas_total += 1
     visitas_hoje += 1
     
-    if request.path.startswith('/database'):
-        registrar_log(f"👤 Acesso Database: {client_ip} -> {request.path}", log_type='database')
-        registrar_log(f"📊 Visitas Total: {visitas_total} | Hoje: {visitas_hoje}", log_type='database')
-    else:
-        registrar_log(f"👤 Acesso: {client_ip} -> {request.path}")
-        atualizar_linha()
+    try:
+        if request.path.startswith('/database'):
+            registrar_log(f"👤 Acesso Database: {client_ip} -> {request.path}", log_type='database')
+            registrar_log(f"📊 Visitas Total: {visitas_total} | Hoje: {visitas_hoje}", log_type='database')
+        else:
+            registrar_log(f"👤 Acesso: {client_ip} -> {request.path}")
+            atualizar_linha()
+    except Exception as e:
+        print(f"Erro ao processar logs de acesso: {e}")
 
 # Configuração para passar para o routes.py
 config = {
     'BASE_DIR': BASE_DIR,
     'DATABASE_DIR': DATABASE_DIR,
     'MAINTENANCE_DIR': MAINTENANCE_DIR,
+    'TEMP_DIR': TEMP_DIR,
+    'ZIP_DIR': ZIP_DIR,
+    'REPO_DIR': REPO_DIR,
     'UPLOAD_FOLDER': UPLOAD_FOLDER,
     'registrar_log': registrar_log,
     'generate_structure_json': generate_structure_json,

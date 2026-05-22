@@ -19,14 +19,27 @@
             return;
         }
 
-        window.firebaseAuth.onAuthStateChanged(user => {
+        window.firebaseAuth.onAuthStateChanged(async user => {
             const now = Date.now();
             const authTimestamp = localStorage.getItem('auth_timestamp');
             
             // Verifica se o usuário está logado no Firebase
             if (!user) {
+                // Limpar cookie se não houver usuário
+                document.cookie = "firebase_auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
                 redirectToLogin();
                 return;
+            }
+
+            // Sincronizar Token com o Backend (Cookie)
+            // Isso permite que rotas protegidas pelo Flask (como upload/zip) funcionem
+            try {
+                const token = await user.getIdToken();
+                // Definir cookie com validade de 7 dias para o backend
+                const maxAge = 7 * 24 * 60 * 60;
+                document.cookie = `firebase_auth_token=${token}; path=/; max-age=${maxAge}; SameSite=Lax`;
+            } catch (e) {
+                console.error("[auth-gate] Erro ao sincronizar token:", e);
             }
 
             // Verifica a expiração de 7 dias

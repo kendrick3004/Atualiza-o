@@ -25,12 +25,26 @@ log "[3/3] Configurando o Cloudflared Tunnel (Persistente)"
 # Add cloudflare gpg key
 log "Adicionando chave GPG do Cloudflare..."
 sudo mkdir -p --mode=0755 /usr/share/keyrings
-curl -fsSL https://pkg.cloudflare.com/cloudflare-main.gpg | sudo tee /usr/share/keyrings/cloudflare-main.gpg >/dev/null && echo 'deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/cloudflared any main' | sudo tee /etc/apt/sources.list.d/cloudflared.list && sudo apt-get update && sudo apt-get install cloudflared -y
+# Adicionar chave GPG
+curl -fsSL https://pkg.cloudflare.com/cloudflare-main.gpg | sudo tee /usr/share/keyrings/cloudflare-main.gpg >/dev/null
+
+# Adicionar repositório
+echo "deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/cloudflared any main" | sudo tee /etc/apt/sources.list.d/cloudflared.list
+
+# Instalar cloudflared
+sudo apt-get update
+sudo apt-get install cloudflared -y
 
 log "Chave GPG adicionada com sucesso"
 
-# Token do usuário
-TOKEN="eyJhIjoiOWNjZGQzMjk0NDllMzJhZWU4YzRkYWRkMDZjOGM0NzciLCJ0IjoiMzQ3NDczMGYtZjMwZi00ZGEyLWE4ZjAtYzBhYmJjZTVhNDBjIiwicyI6Ik5qZ3hOREEwTURjdFpHUmpOQzAwTVdFMExUbGpNRFF0TURZME9EWXhObVpoWTJVdyJ9"
+# Token do usuário (Recomendado: mover para variável de ambiente)
+# Carregar de arquivo .env se existir
+if [ -f ".env" ]; then
+    export $(cat .env | xargs)
+fi
+
+# Se não estiver no ambiente, usa o valor padrão (mantido por compatibilidade, mas marcado como risco)
+TOKEN=${CLOUDFLARED_TOKEN:-"eyJhIjoiOWNjZGQzMjk0NDllMzJhZWU4YzRkYWRkMDZjOGM0NzciLCJ0IjoiMzQ3NDczMGYtZjMwZi00ZGEyLWE4ZjAtYzBhYmJjZTVhNDBjIiwicyI6Ik5qZ3hOREEwTURjdFpHUmpOQzAwTVdFMExUbGpNRFF0TURZME9EWXhObVpoWTJVdyJ9"}
 
 log "Instalando Cloudflare Tunnel como serviço do sistema (systemd)..."
 # Remove serviço antigo se existir para garantir atualização do token
@@ -40,7 +54,7 @@ log "Serviço antigo removido"
 
 # Instala como serviço - isso garante que ele inicie com o sistema e rode independente do Flask
 log "Instalando novo serviço com token atualizado..."
-sudo cloudflared service install $TOKEN
+sudo cloudflared tunnel run $TOKEN
 log "Serviço instalado com sucesso"
 
 # Garante que o serviço esteja habilitado e rodando

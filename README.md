@@ -200,6 +200,13 @@ D:\Github\index\
 ├── 📁 .cloudflared/                      ← Configuração do Cloudflare Tunnel
 │   └── 📄 config.yml                     ← Configuração do tunnel (ver Seção 5)
 │
+├── 📁 .system/                           ← Utilitários e lógica interna do sistema
+│   └── 📁 utils/                         ← Módulos compartilhados (zip_manager.py, etc.)
+│
+├── 📁 .temp/                             ← Arquivos temporários e histórico
+│   ├── 📁 .repo/                         ← Repositórios clonados (clones temporários)
+│   └── 📁 .zip/                          ← Histórico persistente de arquivos ZIP gerados
+│
 ├── 📁 .claude/                           ← Configuração do Claude Code
 │   └── 📄 settings.local.json           ← Configurações locais da IDE
 │
@@ -1880,6 +1887,19 @@ Este README foi gerado a partir da **análise completa** de todos os arquivos do
 ---
 
 ## 19. Histórico de Modificações
+
+### [2026-05-22 10:45]
+- **Arquitetura do Sistema (.system)**: Criada a pasta oculta `.system` para centralizar utilitários e lógica interna do servidor.
+- **Centralização de Zipagem**: Movida a lógica de compressão de arquivos para `.system/utils/zip_manager.py`, permitindo que múltiplos módulos (site, database, temas) utilizem o mesmo sistema de compartilhamento de forma modular.
+- **Organização Estrutural**: A pasta `maintenance` foi mantida na raiz por requisito operacional, mas os scripts de inicialização e rotas foram validados para garantir a coexistência com a nova estrutura `.system`.
+- **Centralização de Credenciais (.env)**: Criado arquivo `.env` na raiz do projeto para armazenar de forma segura o token do Cloudflare, chaves de API do Firebase e do WeatherAPI.
+- **Segurança e Configuração**: Refatorado `setup.sh` para dividir comandos complexos e carregar tokens via variáveis de ambiente. Removidas referências hardcoded de tokens em `start.sh` e `start_copy.sh`.
+- **Correção de Lógica no Database**: Corrigida a geração de `json_key` em `generate_assets_structure.py` para evitar conflitos no diretório raiz e garantir compatibilidade de caminhos (Linux style).
+- **Otimização de Performance (Upload)**: Modificada a rota de upload em `site/routes.py` para realizar uma única atualização da estrutura JSON após o envio de múltiplos arquivos, eliminando processamento redundante.
+- **Melhoria no Rate Limiting e Segurança**: Ajustada a lógica de bloqueio em `site/main.py` para usar `startswith` em pastas ignoradas, evitando falsos positivos. Reforçada a proteção contra Path Traversal em `site/routes.py` com verificação rigorosa de separadores de diretório.
+- **Modo Manutenção**: Corrigida a lógica de servimento de Favicon em `maintenance/main.py` e adicionado tratamento de erros robusto no sistema de logging.
+- **Qualidade de Código**: Adicionadas docstrings em todas as funções críticas e padronizada a nomenclatura para snake_case.
+- **Checklist de Controle**: Criado o arquivo `Oque foi feito` para rastreamento contínuo de melhorias.
 
 ### [2026-05-17 15:15]
 - **Otimização de Download (ZIP no Servidor)**: A rota `/database/download-zip` em `routes.py` foi otimizada para processar a compactação inteiramente no servidor usando `BytesIO`. O arquivo ZIP é gerado em memória e enviado via streaming diretamente para o navegador, eliminando a lentidão de processamento no cliente e evitando o uso de disco permanente no servidor.

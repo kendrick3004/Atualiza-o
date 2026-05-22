@@ -5,7 +5,14 @@ import time
 
 def get_file_info(path, project_root):
     """
-    Coleta informações de um arquivo individual.
+    Collects detailed information about an individual file.
+    
+    Args:
+        path (str): Absolute path to the file.
+        project_root (str): The root directory of the project.
+        
+    Returns:
+        dict: A dictionary containing file metadata (id, name, path, size, etc.) or None if an error occurs.
     """
     try:
         stat = os.stat(path)
@@ -49,8 +56,15 @@ def get_file_info(path, project_root):
 
 def generate_structure(target_dir, project_root, specific_file=None):
     """
-    Escaneia a pasta 'files' e gera a estrutura.
-    Se specific_file for fornecido, tenta atualizar apenas esse arquivo na estrutura existente.
+    Scans the 'files' directory and generates a JSON structure representing the database.
+    
+    Args:
+        target_dir (str): The directory to scan for files.
+        project_root (str): The root directory of the project.
+        specific_file (str, optional): If provided, performs an incremental update for this specific file only.
+        
+    Returns:
+        dict: The generated or updated structure dictionary.
     """
     database_dir = os.path.join(project_root, "database")
     output_path = os.path.join(database_dir, "philistudies.json")
@@ -72,10 +86,15 @@ def generate_structure(target_dir, project_root, specific_file=None):
             if ".git" in dirs:
                 dirs.remove(".git")
 
-            if os.path.abspath(root) == os.path.abspath(target_dir):
+            abs_root = os.path.abspath(root)
+            abs_target = os.path.abspath(target_dir)
+            
+            if abs_root == abs_target:
                 json_key = "database_root"
             else:
-                json_key = "database/" + os.path.relpath(root, database_dir).replace("\\", "/")
+                # Garante que o caminho relativo seja calculado corretamente e use barras normais (Linux style)
+                rel_from_db = os.path.relpath(abs_root, database_dir).replace(os.sep, "/")
+                json_key = "database/" + rel_from_db
 
             current_entry = {"files": [], "folders": []}
 
@@ -103,11 +122,14 @@ def generate_structure(target_dir, project_root, specific_file=None):
         # Atualização incremental para um arquivo específico
         abs_file_path = os.path.abspath(specific_file)
         file_dir = os.path.dirname(abs_file_path)
+        abs_file_dir = os.path.abspath(file_dir)
+        abs_target = os.path.abspath(target_dir)
         
-        if os.path.abspath(file_dir) == os.path.abspath(target_dir):
+        if abs_file_dir == abs_target:
             json_key = "database_root"
         else:
-            json_key = "database/" + os.path.relpath(file_dir, database_dir).replace("\\", "/")
+            rel_from_db = os.path.relpath(abs_file_dir, database_dir).replace(os.sep, "/")
+            json_key = "database/" + rel_from_db
         
         file_info = get_file_info(abs_file_path, project_root)
         if file_info:

@@ -36,6 +36,11 @@ window.addEventListener('DOMContentLoaded', () => {
             const userCredential = await firebaseAuth.signInWithEmailAndPassword(email, pass);
             const user = userCredential.user;
 
+            // Sincronizar Token imediatamente
+            const token = await user.getIdToken();
+            const maxAge = 7 * 24 * 60 * 60;
+            document.cookie = `firebase_auth_token=${token}; path=/; max-age=${maxAge}; SameSite=Lax`;
+
             errorDiv.textContent = "Login realizado! Sincronizando dados...";
             errorDiv.style.color = "#4caf50";
             // ATENÇÃO: O armazenamento de dados de autenticação sensíveis no localStorage é inseguro.

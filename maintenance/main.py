@@ -39,6 +39,10 @@ def maintenance_logic():
         favicon_path = os.path.join(SCRIPT_DIR, 'favicon.png')
         if os.path.exists(favicon_path):
             return send_file(favicon_path)
+        # Se não existir, tenta o favicon.ico se for o pedido
+        favicon_ico = os.path.join(SCRIPT_DIR, 'favicon.ico')
+        if request.path.endswith('favicon.ico') and os.path.exists(favicon_ico):
+            return send_file(favicon_ico)
         return '', 204
 
     # Ignora arquivos estáticos (CSS, JS, Imagens)

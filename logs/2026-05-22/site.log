@@ -1,0 +1,252 @@
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+172.25.112.1 - - [22/May/2026 18:44:22] "GET /database HTTP/1.1" 302 -
+📊 Visitas Total: 2 | Hoje: 2172.25.112.1 - - [22/May/2026 18:44:22] "GET /login?redirect=/database? HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:22] "GET /pages/login/login.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:50] "GET /src/js/main/factory.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:50] "GET /src/js/main/config.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:50] "GET /src/app/update.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:50] "GET /src/js/main/env-loader.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:50] "GET /src/app/update.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:23] "GET /src/styles/fonts-manager.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:23] "GET /src/styles/modes.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:23] "GET /src/js/main/rate-limiter.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:23] "GET /src/js/main/firebase-config.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:23] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:23] "GET /pages/login/login-firebase.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:23] "GET /src/js/main/colors.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:23] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:23] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:24] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 304 -
+📊 Visitas Total: 3 | Hoje: 3172.25.112.1 - - [22/May/2026 18:44:25] "GET / HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:25] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:25] "GET /pages/suite/suite.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:25] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:25] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:25] "GET /pages/suite/weather/weather.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:25] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:25] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:25] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:25] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:25] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:26] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:26] "GET /src/js/main/firebase-sync.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:26] "GET /pages/suite/suite.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:26] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:26] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:26] "GET /pages/suite/weather/weather.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:26] "GET /pages/suite/liturgy.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:26] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:26] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:26] "GET /assets/dev/DATA/calendario.json HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:26] "GET /assets/dev/WEATHER/Moon.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:26] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Night.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:26] "GET /assets/dev/favicon/icon-192.png HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:27] "GET /assets/dev/WEATHER/rain.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:27] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Night.svg HTTP/1.1" 200 -
+📊 Visitas Total: 4 | Hoje: 4172.25.112.1 - - [22/May/2026 18:44:27] "GET /calendar HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /pages/calendar/calendar.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /src/js/main/auth-gate.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /pages/calendar/calendar.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:28] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+📊 Visitas Total: 5 | Hoje: 5172.25.112.1 - - [22/May/2026 18:44:31] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:31] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:31] "GET /pages/login/login.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:31] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:31] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:31] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:31] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:31] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:31] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:31] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:31] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:31] "GET /pages/login/login-firebase.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:31] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:31] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+📊 Visitas Total: 6 | Hoje: 6172.25.112.1 - - [22/May/2026 18:44:34] "GET /login?redirect=/database HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:34] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:34] "GET /pages/login/login.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:34] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:34] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:34] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:34] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:34] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:34] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:34] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:34] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:34] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:34] "GET /pages/login/login-firebase.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:34] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:41] "GET /database HTTP/1.1" 302 -
+📊 Visitas Total: 8 | Hoje: 8172.25.112.1 - - [22/May/2026 18:44:41] "GET /login?redirect=/database? HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:44:41] "GET /pages/login/login.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:41] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:41] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:41] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:41] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:41] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:41] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:41] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:41] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:41] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:41] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:44:41] "GET /pages/login/login-firebase.js HTTP/1.1" 304 -
+📊 Visitas Total: 9 | Hoje: 9172.25.112.1 - - [22/May/2026 18:45:34] "GET /login?redirect=/database HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:45:34] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:45:34] "GET /pages/login/login.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:45:34] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:45:34] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:45:34] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:45:34] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:45:34] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:45:34] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:45:34] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:45:34] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:45:34] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:45:34] "GET /pages/login/login-firebase.js HTTP/1.1" 304 -
+📊 Visitas Total: 10 | Hoje: 10172.25.112.1 - - [22/May/2026 18:46:15] "GET /calendar HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:46:15] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:46:16] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:46:16] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:46:16] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:46:16] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:46:16] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:46:16] "GET /pages/calendar/calendar.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:46:16] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:46:16] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:46:16] "GET /src/js/main/auth-gate.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:46:16] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:46:16] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:46:16] "GET /pages/calendar/calendar.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:46:16] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+📊 Visitas Total: 11 | Hoje: 11172.25.112.1 - - [22/May/2026 18:58:50] "GET /login?redirect=/database HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:58:50] "GET /src/js/main/env-loader.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:58:50] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:58:50] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:58:50] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:58:50] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:58:50] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:58:50] "GET /pages/login/login.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:58:51] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:58:51] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:58:51] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:58:51] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:58:51] "GET /pages/login/login-firebase.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:58:51] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:59:06] "GET /database HTTP/1.1" 302 -
+📊 Visitas Total: 13 | Hoje: 13172.25.112.1 - - [22/May/2026 18:59:06] "GET /login?redirect=/database? HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 18:59:06] "GET /pages/login/login.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:59:06] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:59:06] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:59:06] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:59:06] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:59:06] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:59:06] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:59:06] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:59:06] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:59:06] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:59:06] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:59:06] "GET /pages/login/login-firebase.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 18:59:07] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+127.0.0.1 - - [22/May/2026 19:01:33] "GET /database/ HTTP/1.1" 404 -
+127.0.0.1 - - [22/May/2026 19:17:46] "GET /wp-admin/css/ HTTP/1.1" 404 -
+📊 Visitas Total: 15 | Hoje: 15127.0.0.1 - - [22/May/2026 19:17:54] "GET /.well-known/ HTTP/1.1" 404 -
+📊 Visitas Total: 16 | Hoje: 16127.0.0.1 - - [22/May/2026 19:18:04] "GET /sites/default/files/ HTTP/1.1" 404 -
+📊 Visitas Total: 17 | Hoje: 17127.0.0.1 - - [22/May/2026 19:18:11] "GET /admin/controller/extension/extension/ HTTP/1.1" 404 -
+📊 Visitas Total: 18 | Hoje: 18127.0.0.1 - - [22/May/2026 19:18:19] "GET /uploads/ HTTP/1.1" 404 -
+📊 Visitas Total: 19 | Hoje: 19127.0.0.1 - - [22/May/2026 19:18:26] "GET /images/ HTTP/1.1" 404 -
+📊 Visitas Total: 20 | Hoje: 20127.0.0.1 - - [22/May/2026 19:18:33] "GET /files/ HTTP/1.1" 404 -
+Traceback (most recent call last):
+  File "/mnt/d/Github/ATUALIZAÇÃO/site/main.py", line 10, in <module>
+    from routes import register_routes
+  File "/mnt/d/Github/ATUALIZAÇÃO/site/routes.py", line 12, in <module>
+    from zip_manager import create_zip_in_memory
+ImportError: cannot import name 'create_zip_in_memory' from 'zip_manager' (/mnt/d/Github/ATUALIZAÇÃO/.system/utils/zip_manager.py)
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+📊 Visitas Total: 1 | Hoje: 1172.25.112.1 - - [22/May/2026 19:47:27] "GET / HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /pages/suite/suite.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /pages/suite/weather/weather.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:27] "GET /pages/suite/weather/weather.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:28] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:28] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:28] "GET /assets/dev/DATA/calendario.json HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:28] "GET /assets/dev/WEATHER/rain.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:28] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Night.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:28] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:28] "GET /assets/dev/favicon/icon-192.png HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:28] "GET /assets/dev/WEATHER/Moon,stars%20and%20cloud.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:29] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Night.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:29] "GET /database HTTP/1.1" 302 -
+📊 Visitas Total: 3 | Hoje: 3172.25.112.1 - - [22/May/2026 19:47:30] "GET /login?redirect=/database? HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:30] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:30] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:30] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:30] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:30] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:30] "GET /pages/login/login.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:30] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:30] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:30] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:30] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:30] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:30] "GET /pages/login/login-firebase.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:31] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:40] "GET /database HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:40] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:40] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:40] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:40] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:47:40] "GET /src/js/main/auth-gate.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:40] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:40] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:40] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:40] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:40] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:40] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:41] "GET /database/philistudies.json?v=1779490088265 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:47:41] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 19:47:43] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 19:47:45] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 19:47:48] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 19:48:16] "GET /favicon.ico HTTP/1.1" 204 -
+📊 Visitas Total: 5 | Hoje: 5127.0.0.1 - - [22/May/2026 19:48:58] "GET /robots.txt HTTP/1.1" 404 -
+📊 Visitas Total: 6 | Hoje: 6127.0.0.1 - - [22/May/2026 19:48:58] "GET /pages/login HTTP/1.1" 404 -
+📊 Visitas Total: 7 | Hoje: 7127.0.0.1 - - [22/May/2026 19:52:38] "GET /calendar HTTP/1.1" 200 -

@@ -5,9 +5,11 @@ import subprocess
 from werkzeug.utils import secure_filename
 from functools import wraps
 import json
-import zipfile
 import time
 from io import BytesIO
+# Importar utilitário do sistema
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '.system', 'utils')))
+from zip_manager import create_zip_file
 
 def register_routes(app, config):
     """
@@ -18,6 +20,8 @@ def register_routes(app, config):
     BASE_DIR = config['BASE_DIR']
     DATABASE_DIR = config['DATABASE_DIR']
     MAINTENANCE_DIR = config['MAINTENANCE_DIR']
+    TEMP_DIR = config['TEMP_DIR']
+    ZIP_DIR = config['ZIP_DIR']
     UPLOAD_FOLDER = config['UPLOAD_FOLDER']
     registrar_log = config['registrar_log']
     generate_structure_json = config['generate_structure_json']
@@ -98,8 +102,9 @@ def register_routes(app, config):
                 real_database = os.path.realpath(os.path.normpath(DATABASE_DIR))
                 real_proposed = os.path.realpath(proposed_dest)
                 
-                # Verificar se o caminho proposto está dentro de DATABASE_DIR
-                if real_proposed.startswith(real_database):
+                # Segurança: garantir que o destino está dentro de DATABASE_DIR
+                # Adicionar separador para evitar bypass como /database_evil
+                if real_proposed.startswith(os.path.join(real_database, '')):
                     dest_folder = real_proposed
                 else:
                     registrar_log(f"⚠️ Tentativa de path traversal bloqueada: {current_path_param}", log_type='database')
@@ -119,8 +124,13 @@ def register_routes(app, config):
             uploaded_count += 1
             registrar_log(f"⬆️ Upload: {client_ip} enviou {filename} -> {dest_folder}", log_type='database')
             
-            # Atualização incremental da estrutura para cada arquivo enviado
-            generate_structure_json(filepath)
+            # Otimização: Não chamamos generate_structure_json(filepath) aqui para múltiplos arquivos
+            # Chamaremos uma vez ao final para a pasta de destino para ser mais eficiente
+            pass
+        
+        # Atualização única para a pasta de destino (ou regeneração completa se preferir)
+        # Como o script atualiza um arquivo por vez ou tudo, vamos disparar uma atualização da pasta
+        generate_structure_json() 
         
         return jsonify({
             "message": f"{uploaded_count} arquivo(s) enviados com sucesso",
@@ -149,7 +159,7 @@ def register_routes(app, config):
     @app.route('/database/download-zip', methods=['POST'])
     @require_auth
     def download_zip():
-        """Compacta arquivos/pastas no servidor e retorna ZIP via streaming (sem salvar no disco)"""
+        """Compacta arquivos/pastas no servidor e retorna ZIP via streaming usando utilitário centralizado"""
         try:
             data = request.get_json()
             paths = data.get('paths', [])
@@ -157,54 +167,20 @@ def register_routes(app, config):
             if not paths:
                 return jsonify({"error": "Nenhum caminho fornecido"}), 400
             
-            # Criar ZIP em memória (BytesIO) para evitar escrita em disco permanente
-            zip_buffer = BytesIO()
-            
-            with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
-                for path in paths:
-                    # Sanitizar caminho para evitar path traversal
-                    # O frontend envia caminhos relativos ao DATABASE_DIR
-                    safe_path = os.path.normpath(path)
-                    if safe_path.startswith('..'):
-                        continue
-                    
-                    full_path = os.path.join(DATABASE_DIR, safe_path)
-                    real_database = os.path.realpath(os.path.normpath(DATABASE_DIR))
-                    
-                    # Verificar se o caminho existe e está dentro de DATABASE_DIR
-                    if not os.path.exists(full_path):
-                        continue
-                        
-                    real_path = os.path.realpath(full_path)
-                    if not real_path.startswith(real_database):
-                        continue
-                    
-                    if os.path.isfile(full_path):
-                        # Adicionar arquivo individual
-                        arcname = os.path.basename(full_path)
-                        zip_file.write(full_path, arcname=arcname)
-                    elif os.path.isdir(full_path):
-                        # Adicionar pasta inteira recursivamente
-                        for root, dirs, files in os.walk(full_path):
-                            for file in files:
-                                file_path = os.path.join(root, file)
-                                # Calcula o caminho relativo para manter a estrutura dentro do ZIP
-                                arcname = os.path.relpath(file_path, os.path.dirname(full_path))
-                                zip_file.write(file_path, arcname=arcname)
-            
-            # Reposiciona o ponteiro para o início do buffer
-            zip_buffer.seek(0)
+            # Usar o utilitário centralizado em .system/utils
+            # O arquivo ZIP agora é salvo fisicamente em .temp/.zip e mantido lá
+            zip_path = create_zip_file(paths, DATABASE_DIR, ZIP_DIR)
             
             # Registrar apenas no log que o ZIP foi gerado
             client_ip = request.remote_addr
-            registrar_log(f"📦 [ZIP] Servidor gerou e enviou pacote com {len(paths)} item(s) para {client_ip}", log_type='database')
+            registrar_log(f"📦 [ZIP] Servidor gerou e salvou pacote em {zip_path} para {client_ip}", log_type='database')
             
-            # Envia o arquivo diretamente da memória
+            # Envia o arquivo salvo fisicamente
             return send_file(
-                zip_buffer,
+                zip_path,
                 mimetype='application/zip',
                 as_attachment=True,
-                download_name=f'download_{int(time.time())}.zip'
+                download_name=os.path.basename(zip_path)
             )
         
         except Exception as e:

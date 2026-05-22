@@ -104,6 +104,11 @@
             try {
                 const result = await firebaseAuth.signInWithPopup(provider);
                 const user = result.user;
+
+                // Sincronizar Token imediatamente para o backend
+                const token = await user.getIdToken();
+                const maxAge = 7 * 24 * 60 * 60;
+                document.cookie = `firebase_auth_token=${token}; path=/; max-age=${maxAge}; SameSite=Lax`;
                 
                 // Salva dados básicos no localStorage
                 const userData = JSON.stringify({ 
