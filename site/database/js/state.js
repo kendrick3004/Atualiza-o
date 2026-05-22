@@ -78,9 +78,27 @@ function showNotification(message, type = "info") {
     notif.style.background = colors[type] || colors.info;
     notif.textContent = message;
     document.body.appendChild(notif);
+
+    // Reposicionar todas as notificações ativas para empilhar verticalmente
+    const allNotifs = document.querySelectorAll('.notification');
+    let offsetTop = 20;
+    allNotifs.forEach(n => {
+        n.style.top = offsetTop + 'px';
+        offsetTop += n.offsetHeight + 10;
+    });
+
     setTimeout(() => {
         notif.style.animation = "slideOut 0.3s ease-in forwards";
-        setTimeout(() => notif.remove(), 300);
+        setTimeout(() => {
+            notif.remove();
+            // Reposicionar as restantes após remoção
+            const remaining = document.querySelectorAll('.notification');
+            let top = 20;
+            remaining.forEach(n => {
+                n.style.top = top + 'px';
+                top += n.offsetHeight + 10;
+            });
+        }, 300);
     }, 2500);
 }
 

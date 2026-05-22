@@ -39,40 +39,41 @@ async function downloadSelected() {
         }
     }
 
-    // Se houver apenas arquivos, baixar normalmente
-    if (filesToDownload.length > 0 && foldersToDownload.length === 0) {
-        showNotification(`Baixando ${filesToDownload.length} arquivo(s)...`, "info");
-        for (const file of filesToDownload) {
-            const a = document.createElement('a');
-            a.href = "/" + file.path;
-            a.download = file.name;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-        showNotification(`${filesToDownload.length} arquivo(s) baixado(s)!`, "success");
+    // Se houver apenas 1 arquivo e nenhuma pasta, baixar diretamente
+    if (filesToDownload.length === 1 && foldersToDownload.length === 0) {
+        showNotification(`Baixando ${filesToDownload[0].name}...`, "info");
+        const a = document.createElement('a');
+        a.href = "/" + filesToDownload[0].path;
+        a.download = filesToDownload[0].name;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        showNotification(`${filesToDownload[0].name} baixado!`, "success");
         registrarLogDownload(filesToDownload, "arquivos");
         return;
     }
 
-    // Se houver pastas, usar compactação no servidor
-    if (foldersToDownload.length > 0) {
-        showNotification("Preparando download (compactando no servidor)...", "info");
-        await downloadZipFromServer(foldersToDownload, filesToDownload);
-    }
+    // Se houver múltiplos arquivos ou pastas, usar compactação no servidor
+    showNotification("Preparando download (compactando no servidor)...", "info");
+    await downloadZipFromServer(foldersToDownload, filesToDownload);
 }
 
 async function downloadZipFromServer(folders, files) {
     try {
         // Preparar lista de caminhos
+        // O zip_manager recebe caminhos relativos ao DATABASE_DIR (ex: "files/dev")
+        // mas file.path e folder.path têm o prefixo "database/" (ex: "database/files/dev")
+        // Precisamos remover o prefixo "database/" antes de enviar
         const paths = [];
         
         for (const file of files) {
-            paths.push(file.path);
+            const p = file.path.startsWith('database/') ? file.path.slice('database/'.length) : file.path;
+            paths.push(p);
         }
         
         for (const folder of folders) {
-            paths.push(folder.path);
+            const p = folder.path.startsWith('database/') ? folder.path.slice('database/'.length) : folder.path;
+            paths.push(p);
         }
 
         // Enviar requisição POST para o servidor

@@ -1913,3 +1913,27 @@ Este README foi gerado a partir da **análise completa** de todos os arquivos do
 - **Correção de Navegação**: Removido o interceptor de login para o Calendário em `site/pages/suite/suite.js`. O calendário agora possui acesso público direto da página inicial, corrigindo o bug de redirecionamento indevido.
 - **Ajuste Visual na Suite**: Refinamento dos cards da Liturgia das Horas na Suite principal. Quando uma oração é completada, o card agora exibe uma borda verde mais grossa (3px) com um detalhe em amarelo/dourado (outline), restaurando o visual clássico solicitado.
 - **Documentação**: Atualização completa do `README.md` com o histórico detalhado das alterações realizadas nesta sessão.
+
+### [2026-05-22 21:00]
+- **Correção: Notificações Sobrepostas** — A função `showNotification` em `site/database/js/state.js` foi refatorada para empilhar as notificações verticalmente em vez de sobrepô-las. Cada nova notificação é posicionada abaixo da anterior usando cálculo dinâmico de `offsetHeight`. O CSS em `styles.css` recebeu `transition: top 0.2s ease` para animar o reposicionamento após remoção.
+- **Correção: ZIP Vazio no Download** — Identificado e corrigido o bug crítico de path duplo: o frontend enviava `database/files/dev` para o servidor, mas o `zip_manager.py` já recebe caminhos relativos ao `DATABASE_DIR` (que é `database/`), resultando em `database/database/files/dev` (inexistente). A função `downloadZipFromServer` em `selection.js` agora remove o prefixo `database/` antes de enviar. O `zip_manager.py` também foi reforçado com remoção defensiva do prefixo e validação de `files_added > 0`.
+- **Correção: Cálculo de Tamanho Duplicado** — Adicionada a função `isContainedInSelectedFolder` em `file-loader.js` que evita dupla contagem ao calcular o tamanho total da seleção. Quando uma pasta e seus arquivos filhos estão selecionados simultaneamente, apenas o tamanho da pasta é contabilizado.
+- **Correção: Pasta Aparecendo Vazia no Breadcrumb** — O `updateBreadcrumb` em `file-loader.js` reconstruía o path como `database/dev` ao clicar no breadcrumb, mas a chave real no JSON é `database/files/dev`. Corrigido para usar o prefixo `database/files/` ao reconstruir os caminhos de navegação.
+- **Correção: URL com Parâmetros Query** — O `pushState` em `loadFilesFromPath` agora sempre define a URL como `/database` independentemente da pasta navegada, eliminando o `?path=database/files/dev` da barra de endereços.
+- **Melhoria: Download de Múltiplos Arquivos via ZIP** — Quando múltiplos arquivos são selecionados (sem pastas), o sistema agora usa compactação no servidor em vez de disparar múltiplos downloads simultâneos. Download direto só ocorre para seleção de 1 arquivo único.
+- **Arquivos Modificados**: `site/database/js/state.js`, `site/database/js/file-loader.js`, `site/database/js/selection.js`, `site/database/styles.css`, `.system/utils/zip_manager.py`
+
+### [2026-05-22 21:30]
+- **Centralização de Segredos e Chaves de API** — Realizada a refatoração completa para remover chaves hardcoded dos arquivos de código fonte.
+- **Novo Endpoint `/api/config`** — Criado endpoint no `main.py` que lê as chaves do Firebase e Weather do arquivo `.env` e as fornece de forma segura para o frontend.
+- **Refatoração do `env-loader.js`** — O carregador de ambiente do frontend agora busca as configurações dinamicamente do servidor via `fetch('/api/config')`, eliminando a necessidade de manter chaves no código JS.
+- **Firebase e Weather Dinâmicos** — Os módulos `firebase-config.js` e `weather.js` foram atualizados para aguardar o carregamento assíncrono das chaves antes da inicialização.
+- **Segurança no `setup.sh`** — Removido o token do Cloudflare Tunnel que estava hardcoded. O script agora exige que o token esteja presente no `.env`, aumentando a proteção das credenciais de rede.
+- **Carregamento de `.env` no `start.sh`** — Adicionada lógica para exportar variáveis do `.env` durante o processo de boot, garantindo que o ambiente esteja configurado corretamente para o Flask e serviços auxiliares.
+- **Arquivos Modificados**: `site/main.py`, `site/src/js/main/env-loader.js`, `site/src/js/main/firebase-config.js`, `setup.sh`, `start.sh`.
+
+### [2026-05-22 21:45]
+- **Correção: Login com Google e Firebase Assíncrono** — Resolvido o problema onde o botão de login com Google não funcionava. Devido ao novo carregamento dinâmico de chaves do `.env`, o Firebase agora inicializa de forma assíncrona.
+- **Sincronização de Inicialização** — Implementada a função `window.waitForFirebase()` no `firebase-config.js`, que permite que outros scripts aguardem a conclusão do carregamento das chaves e do SDK antes de realizar chamadas de autenticação.
+- **Refatoração da Página de Login** — O `login.html` e o `login-firebase.js` foram atualizados para utilizar o novo mecanismo de espera, garantindo que `firebase.auth()` esteja disponível antes de qualquer interação do usuário.
+- **Arquivos Modificados**: `site/src/js/main/firebase-config.js`, `site/pages/login.html`, `site/pages/login/login-firebase.js`.

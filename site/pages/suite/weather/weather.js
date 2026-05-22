@@ -1,15 +1,14 @@
 /**
  * ARQUIVO: weather.js
- * DESCRIÇÃO: Motor de clima com geolocalização de nível nativo e suporte offline.
- * FUNCIONALIDADES: Persistência de dados local, geolocalização rápida (5s) e avisos de conectividade.
- * VERSÃO: 2.5.0 - Layout de Informações Corrigido (Mín, Hum, Chuva mm, Prob %)
+ * DESCRICAO: Motor de clima com geolocalizacao e suporte offline.
+ * VERSAO: 2.6.0 - Chaves carregadas dinamicamente com fallback seguro
  */
 
 const WeatherModule = (function() {
     'use strict';
 
-    const CONFIG = {
-        API_KEY: ENV.get('WEATHER_API_KEY'), // Carregado de forma segura via env-loader.js
+    let CONFIG = {
+        API_KEY: null,
         DEFAULT_CITY: 'Jacinto Machado',
         UPDATE_INTERVAL: 15 * 60 * 1000,
         ENDPOINTS: {
@@ -59,18 +58,14 @@ const WeatherModule = (function() {
         return null;
     }
 
-    function showOfflineMessage() {
+    function showErrorMessage(msg) {
         const footer = document.querySelector('.weather-footer');
         if (footer) {
-            const offlineBanner = document.createElement('div');
-            offlineBanner.className = 'weather-offline-banner';
-            offlineBanner.innerHTML = '🌐 Conecte-se à internet para atualizar o clima';
-            offlineBanner.style.cssText = 'font-size: 12px; background: rgba(0,0,0,0.5); padding: 4px; text-align: center; width: 100%; position: absolute; top: 0;';
-            
-            if (!footer.querySelector('.weather-offline-banner')) {
-                footer.style.position = 'relative';
-                footer.prepend(offlineBanner);
-            }
+            footer.innerHTML = `
+                <div class="weather-content" style="display:flex; align-items:center; justify-content:center; height:100%; font-size:12px; color:rgba(255,255,255,0.6);">
+                    <span>🌦️ ${msg}</span>
+                </div>
+            `;
         }
     }
 
@@ -210,27 +205,32 @@ const WeatherModule = (function() {
                 </div>
             `;
             
-            if (!navigator.onLine) showOfflineMessage();
-            
         } catch (e) {
             console.error('[Weather] Erro ao renderizar interface:', e);
         }
     }
 
     async function fetchWeather() {
-        if (!navigator.onLine) {
+        if (!CONFIG.API_KEY) {
+            CONFIG.API_KEY = await ENV.getAsync('WEATHER_API_KEY');
+        }
+
+        if (!CONFIG.API_KEY) {
+            console.warn('[Weather] Chave de API nao carregada. Usando dados locais.');
             const cachedData = loadFromLocal();
-            if (cachedData) {
-                updateUI(cachedData);
-                showOfflineMessage();
-            }
+            if (cachedData) updateUI(cachedData);
+            else showErrorMessage('Clima indisponivel no momento');
             return;
         }
 
-        const query = CONFIG.DEFAULT_CITY;
+        if (!navigator.onLine) {
+            const cachedData = loadFromLocal();
+            if (cachedData) updateUI(cachedData);
+            return;
+        }
 
         try {
-            const url = `${CONFIG.ENDPOINTS.FORECAST}?key=${CONFIG.API_KEY}&q=${encodeURIComponent(query)}&days=1&lang=pt`;
+            const url = `${CONFIG.ENDPOINTS.FORECAST}?key=${CONFIG.API_KEY}&q=${encodeURIComponent(CONFIG.DEFAULT_CITY)}&days=1&lang=pt`;
             const response = await fetch(url);
             if (!response.ok) throw new Error(`Erro HTTP: ${response.status}`);
             const data = await response.json();
@@ -244,13 +244,15 @@ const WeatherModule = (function() {
         }
     }
 
-    function init() {
+    async function init() {
         const cachedData = loadFromLocal();
         if (cachedData) updateUI(cachedData);
-        fetchWeather();
+        
+        // Aguardar o ENV estar pronto antes de buscar clima
+        await fetchWeather();
+        
         setInterval(() => fetchWeather(), CONFIG.UPDATE_INTERVAL);
         window.addEventListener('online', () => fetchWeather());
-        window.addEventListener('offline', showOfflineMessage);
     }
 
     return { init };

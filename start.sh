@@ -2,6 +2,13 @@
 
 set -u
 
+# Carregar variaveis de ambiente do arquivo .env
+if [ -f ".env" ]; then
+    export $(cat .env | xargs)
+else
+    echo "⚠️ Aviso: Arquivo .env nao encontrado. Algumas funcionalidades podem nao funcionar."
+fi
+
 # Pega o diretório onde o script está localizado
 BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 

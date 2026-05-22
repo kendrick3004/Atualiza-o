@@ -28,7 +28,7 @@ Você está em **modo EXECUÇÃO**, não em modo consultoria.
 
 ## PASSO 1 — EXECUÇÃO SOB DEMANDA
 
-Após a varredura, todas as ações seguintes são executadas **somente mediante instrução do usuário**.
+Todas as ações seguintes são executadas **somente mediante instrução do usuário**.
 
 Ao receber uma instrução:
 1. Baseie-se no mapa construído na varredura — nunca em suposições.

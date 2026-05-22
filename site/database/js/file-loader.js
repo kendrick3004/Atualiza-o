@@ -58,8 +58,8 @@ function loadFilesFromPath(path, pushState = true) {
     updateBreadcrumb();
     renderFiles();
     if (pushState) {
-        const newUrl = path === "database_root" ? "/database" : `/database?path=${path}`;
-        window.history.pushState({ path: path }, "", newUrl);
+        // A URL sempre mostra apenas /database, sem parâmetros query
+        window.history.pushState({ path: path }, "", "/database");
     }
 }
 
@@ -72,19 +72,24 @@ function updateBreadcrumb() {
     elements.breadcrumbPath.appendChild(rootBtn);
 
     if (currentPath !== "database_root") {
-        const parts = currentPath.replace("database/", "").split("/");
-        let pathBuild = "database";
+        // O path real no JSON é "database/files/...", mas o breadcrumb exibe apenas os segmentos
+        // a partir de "files/" em diante, ignorando o prefixo "database/files"
+        const PREFIX = "database/files/";
+        const relativePart = currentPath.startsWith(PREFIX)
+            ? currentPath.slice(PREFIX.length)
+            : currentPath.replace("database/", "");
+
+        const parts = relativePart.split("/").filter(p => p && p !== "files");
+        let pathBuild = "database/files";
         parts.forEach((part) => {
-            if (part && part !== "files") {
-                pathBuild += "/" + part;
-                const currentPathBuild = pathBuild;
-                elements.breadcrumbPath.appendChild(document.createTextNode(" / "));
-                const partBtn = document.createElement("span");
-                partBtn.textContent = part;
-                partBtn.style.cursor = "pointer";
-                partBtn.onclick = () => loadFilesFromPath(currentPathBuild);
-                elements.breadcrumbPath.appendChild(partBtn);
-            }
+            pathBuild += "/" + part;
+            const currentPathBuild = pathBuild;
+            elements.breadcrumbPath.appendChild(document.createTextNode(" / "));
+            const partBtn = document.createElement("span");
+            partBtn.textContent = part;
+            partBtn.style.cursor = "pointer";
+            partBtn.onclick = () => loadFilesFromPath(currentPathBuild);
+            elements.breadcrumbPath.appendChild(partBtn);
         });
     }
 }
@@ -250,11 +255,28 @@ function setViewMode(mode) {
     renderFiles();
 }
 
+/**
+ * Verifica se um determinado ID de arquivo/pasta está contido dentro de alguma
+ * pasta que também está selecionada. Evita dupla contagem de tamanho.
+ */
+function isContainedInSelectedFolder(id) {
+    for (const selId of selectedFiles) {
+        if (selId === id) continue;
+        const sel = findFileById(selId);
+        if (sel && sel.isDirectory && id.startsWith(selId + '/')) {
+            return true;
+        }
+    }
+    return false;
+}
+
 function updateSelectionInfo() {
     if (selectedFiles.length > 0 && !isUploading) {
         elements.selectionInfo.style.display = "flex";
         let totalSize = 0;
         selectedFiles.forEach(id => {
+            // Ignorar se este item já está contido em uma pasta selecionada (evita dupla contagem)
+            if (isContainedInSelectedFolder(id)) return;
             const file = findFileById(id);
             if (file) totalSize += (file.isDirectory ? getFolderSize(file.id) : file.size) || 0;
         });

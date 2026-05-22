@@ -18,8 +18,9 @@ sudo apt update
 
 # Instala pacotes do sistema solicitados e essenciais
 # Os pacotes do sistema (nano, curl, wget, openssh-server, net-tools, git, python3, python3-pip, python3-venv) devem ser instalados manualmente antes de executar este script.
-log "[2/3] Instalando pacotes do sistema solicitados e essenciais"
+log "[2/3] Instalando pacotes do sistema e dependencias Python"
 sudo apt install -y nano curl wget openssh-server net-tools git python3 python3-pip python3-venv
+sudo pip3 install flask python-dotenv werkzeug --break-system-packages || sudo pip3 install flask python-dotenv werkzeug
 
 log "[3/3] Configurando o Cloudflared Tunnel (Persistente)"
 # Add cloudflare gpg key
@@ -37,14 +38,25 @@ sudo apt-get install cloudflared -y
 
 log "Chave GPG adicionada com sucesso"
 
-# Token do usuário (Recomendado: mover para variável de ambiente)
-# Carregar de arquivo .env se existir
+# Carregar variaveis de ambiente do arquivo .env (obrigatório)
+log "Carregando variaveis de ambiente do .env..."
 if [ -f ".env" ]; then
     export $(cat .env | xargs)
+    log "✅ Variaveis de ambiente carregadas com sucesso"
+else
+    log "❌ ERRO: Arquivo .env nao encontrado na raiz do projeto"
+    log "❌ Certifique-se de que o arquivo .env existe e contém CLOUDFLARED_TOKEN"
+    exit 1
 fi
 
-# Se não estiver no ambiente, usa o valor padrão (mantido por compatibilidade, mas marcado como risco)
-TOKEN=${CLOUDFLARED_TOKEN:-"eyJhIjoiOWNjZGQzMjk0NDllMzJhZWU4YzRkYWRkMDZjOGM0NzciLCJ0IjoiMzQ3NDczMGYtZjMwZi00ZGEyLWE4ZjAtYzBhYmJjZTVhNDBjIiwicyI6Ik5qZ3hOREEwTURjdFpHUmpOQzAwTVdFMExUbGpNRFF0TURZME9EWXhObVpoWTJVdyJ9"}
+# Validar que o token Cloudflare foi carregado
+if [ -z "$CLOUDFLARED_TOKEN" ]; then
+    log "❌ ERRO: CLOUDFLARED_TOKEN nao esta definido no arquivo .env"
+    log "❌ Adicione a variavel CLOUDFLARED_TOKEN ao arquivo .env e tente novamente"
+    exit 1
+fi
+
+TOKEN=$CLOUDFLARED_TOKEN
 
 log "Instalando Cloudflare Tunnel como serviço do sistema (systemd)..."
 # Remove serviço antigo se existir para garantir atualização do token

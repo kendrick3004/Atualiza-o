@@ -438,7 +438,7 @@ body {
 /* Notificações */
 .notification {
     position: fixed;
-    top: 20px;
+    top: 20px; /* valor inicial; será sobrescrito por JS para empilhamento */
     right: 20px;
     padding: 12px 20px;
     border-radius: 8px;
@@ -447,6 +447,7 @@ body {
     font-size: 14px;
     color: white;
     animation: slideIn 0.3s ease-out;
+    transition: top 0.2s ease;
 }
 
 @keyframes slideIn {

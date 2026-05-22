@@ -1,10 +1,13 @@
 /**
  * ARQUIVO: login-firebase.js
- * DESCRIÇÃO: Lógica de autenticação usando Firebase Auth
- * VERSÃO: 1.0.0
+ * DESCRICAO: Logica de autenticacao usando Firebase Auth
+ * VERSAO: 1.1.0 - Aguarda Firebase estar pronto
  */
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', async () => {
+    // Aguardar o Firebase estar pronto
+    await window.waitForFirebase();
+    
     const errorDiv = document.getElementById("loginError");
     const form = document.getElementById("loginForm");
     const button = document.getElementById("loginSubmitBtn");
@@ -32,8 +35,8 @@ window.addEventListener('DOMContentLoaded', () => {
         errorDiv.style.color = "var(--text-secondary)";
 
         try {
-            // Autenticação com Firebase
-            const userCredential = await firebaseAuth.signInWithEmailAndPassword(email, pass);
+            // Autenticacao com Firebase
+            const userCredential = await window.firebaseAuth.signInWithEmailAndPassword(email, pass);
             const user = userCredential.user;
 
             // Sincronizar Token imediatamente
@@ -43,17 +46,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
             errorDiv.textContent = "Login realizado! Sincronizando dados...";
             errorDiv.style.color = "#4caf50";
-            // ATENÇÃO: O armazenamento de dados de autenticação sensíveis no localStorage é inseguro.
-            // Em um ambiente de produção, utilize HttpOnly cookies para tokens de sessão
-            // ou um gerenciamento de sessão seguro no lado do servidor.
-            // Para fins de demonstração, manteremos o redirecionamento, mas sem armazenar dados sensíveis diretamente aqui.
-            // localStorage.setItem(\'auth_user\', JSON.stringify({ id: user.uid, name: user.displayName || user.email.split(\'@\')[0], email: user.email, timestamp: Date.now() }));
-            // localStorage.setItem(\'auth_timestamp\', Date.now().toString());
-          // Redirecionamento para o calendário de orações
+            
+            // Redirecionamento para o calendario de oracoes
             const urlParams = new URLSearchParams(window.location.search);
             const redirectUrl = urlParams.get('redirect');
             setTimeout(() => {
-                // Padrão: redireciona para o calendário (sem .html)
+                // Padrao: redireciona para o calendario (sem .html)
                 window.location.href = redirectUrl ? decodeURIComponent(redirectUrl) : "/calendar";
             }, 1000);
 
@@ -73,7 +71,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     errorDiv.textContent = "Muitas tentativas. Tente mais tarde.";
                     break;
                 default:
-                    errorDiv.textContent = "Erro ao fazer login. Verifique sua conexão.";
+                    errorDiv.textContent = "Erro ao fazer login. Verifique sua conexao.";
             }
         }
     });

@@ -5,6 +5,13 @@ import os
 import time
 import subprocess
 from collections import defaultdict
+try:
+    from dotenv import load_dotenv
+    # Carregar variaveis de ambiente do arquivo .env
+    load_dotenv()
+except ImportError:
+    # Fallback caso python-dotenv nao esteja instalado
+    print("⚠️ Aviso: python-dotenv nao encontrado. Usando variaveis de ambiente do sistema.")
 
 # Importar o registrador de rotas
 from routes import register_routes
@@ -141,7 +148,28 @@ def security_and_tracking():
     except Exception as e:
         print(f"Erro ao processar logs de acesso: {e}")
 
-# Configuração para passar para o routes.py
+# --- ROTA DE CONFIGURACAO DO FRONTEND (Carrega chaves do .env) ---
+@app.route('/api/config', methods=['GET'])
+def get_frontend_config():
+    """
+    Endpoint que fornece as variaveis de ambiente necessarias para o frontend.
+    Apenas as chaves publicas (nao sensiveis) sao retornadas.
+    """
+    config_data = {
+        'FIREBASE_API_KEY': os.getenv('FIREBASE_API_KEY', ''),
+        'FIREBASE_AUTH_DOMAIN': os.getenv('FIREBASE_AUTH_DOMAIN', ''),
+        'FIREBASE_PROJECT_ID': os.getenv('FIREBASE_PROJECT_ID', ''),
+        'FIREBASE_STORAGE_BUCKET': os.getenv('FIREBASE_STORAGE_BUCKET', ''),
+        'FIREBASE_MESSAGING_SENDER_ID': os.getenv('FIREBASE_MESSAGING_SENDER_ID', ''),
+        'FIREBASE_APP_ID': os.getenv('FIREBASE_APP_ID', ''),
+        'FIREBASE_MEASUREMENT_ID': os.getenv('FIREBASE_MEASUREMENT_ID', ''),
+        'FIREBASE_DATABASE_URL': os.getenv('FIREBASE_DATABASE_URL', ''),
+        'WEATHER_API_KEY': os.getenv('WEATHER_API_KEY', '')
+    }
+    registrar_log(f"📋 Configuracao do frontend solicitada por {request.remote_addr}")
+    return jsonify(config_data), 200
+
+# Configuracao para passar para o routes.py
 config = {
     'BASE_DIR': BASE_DIR,
     'DATABASE_DIR': DATABASE_DIR,

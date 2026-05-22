@@ -378,3 +378,341 @@ Press CTRL+C to quit
 172.25.112.1 - - [22/May/2026 20:05:53] "GET /pages/suite/suite.js HTTP/1.1" 304 -
 172.25.112.1 - - [22/May/2026 20:05:53] "GET /pages/calendar/calendar.js HTTP/1.1" 200 -
 172.25.112.1 - - [22/May/2026 20:05:26] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+📊 Visitas Total: 1 | Hoje: 1172.25.112.1 - - [22/May/2026 20:10:22] "GET / HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:22] "GET /src/styles/fonts-manager.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:22] "GET /src/styles/modes.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:22] "GET /pages/suite/suite.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:22] "GET /pages/suite/weather/weather.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:22] "GET /src/app/update.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:22] "GET /src/js/main/env-loader.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:22] "GET /src/js/main/factory.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:22] "GET /src/app/update.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:22] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:22] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:23] "GET /src/js/main/rate-limiter.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:23] "GET /src/js/main/firebase-config.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:23] "GET /src/js/main/firebase-sync.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:23] "GET /pages/suite/suite.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:23] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:23] "GET /pages/suite/weather/weather.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:23] "GET /pages/suite/liturgy.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:23] "GET /src/js/main/colors.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:23] "GET /assets/dev/DATA/calendario.json HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:23] "GET /assets/dev/WEATHER/Moon,stars%20and%20cloud.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:23] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:23] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Night.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:24] "GET /assets/dev/WEATHER/rain.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:24] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Night.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:24] "GET /database HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:25] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:25] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:25] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:25] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:25] "GET /src/js/main/auth-gate.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:25] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:25] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:25] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:25] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:25] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:25] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:25] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:10:25] "GET /database/philistudies.json?v=1779491452820 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:28] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:10:29] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:10:29] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:10:30] "GET /favicon.ico HTTP/1.1" 204 -
+📊 Visitas Total: 3 | Hoje: 3172.25.112.1 - - [22/May/2026 20:10:31] "GET /calendar HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:31] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /pages/calendar/calendar.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /src/js/main/config.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /src/js/main/auth-gate.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /pages/calendar/calendar.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:32] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:34] "GET /database HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:34] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:34] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:34] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:34] "GET /src/js/main/auth-gate.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:34] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:34] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:34] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:35] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:35] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:35] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:35] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:35] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:10:35] "GET /database/philistudies.json?v=1779491462594 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:39] "POST /database/download-zip HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:48] "POST /database/download-zip HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:53] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:10:55] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:10:55] "GET /database/files/dev/avatar/avatar.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:10:55] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:10:56] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:10:57] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:10:57] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:10:57] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Day.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:57] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Night.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:57] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Day.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:57] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Night.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:57] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Day.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:58] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Night.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:58] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Storm,%20Moment=Day.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:58] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Day.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:58] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Storm,%20Moment=Night.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:10:58] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Night.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:11:00] "POST /database/download-zip HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:11:09] "POST /database/download-zip HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:11:14] "POST /database/download-zip HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:11:37] "POST /database/download-zip HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:11:49] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:11:49] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:11:53] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:11:54] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:23] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:11:58] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:11:58] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:11:58] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Day.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:11:59] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:11:59] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Clear,%20Moment=Night.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:11:59] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Day.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:11:59] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Day.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:11:59] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Night.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:11:59] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Night.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:11:59] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Day.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:11:59] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Few%20Clouds,%20Moment=Night.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:11:59] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Storm,%20Moment=Day.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:11:59] "GET /database/files/dev/TEMPLATES_WEATHER/Weather=Storm,%20Moment=Night.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:12:08] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:09] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:38] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:12] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:13] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:14] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:15] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:15] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:17] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:18] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:18] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:12:20] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:12:23] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:48] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:51] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:13:18] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:12:52] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:52] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:53] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:54] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:12:54] "GET /database/files/dev/WEATHER/Group%206.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:12:54] "GET /database/files/dev/WEATHER/rain.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:12:54] "GET /database/files/dev/WEATHER/Group%203.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:12:54] "GET /database/files/dev/WEATHER/Moon.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:12:54] "GET /database/files/dev/WEATHER/Group%205.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:12:54] "GET /database/files/dev/WEATHER/Group%207.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:12:54] "GET /database/files/dev/WEATHER/Moon%20clouds.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:12:54] "GET /database/files/dev/WEATHER/Moon,stars%20and%20cloud.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:12:54] "GET /database/files/dev/WEATHER/sun%20clouds-1.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:12:54] "GET /database/files/dev/WEATHER/sun%20clouds.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:12:54] "GET /database/files/dev/WEATHER/sun%20rain.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:12:55] "GET /database/files/dev/WEATHER/Sun.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:13:01] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:13:08] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:13:09] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:13:10] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:13:11] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:13:11] "GET /database/files/dev/favicon/Favicon_R.png HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:12] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:13:12] "GET /database/files/dev/favicon/Favicon.png HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:12] "GET /database/files/dev/favicon/icon-192-maskable.png HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:12] "GET /database/files/dev/favicon/icon-192.png HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:12] "GET /database/files/dev/favicon/icon-512-maskable.png HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:12] "GET /database/files/dev/favicon/icon-512.png HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:21] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:13:31] "GET /database?path=database/dev HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:13:59] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:59] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:59] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:59] "GET /src/js/main/auth-gate.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:59] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:59] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:31] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:32] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:32] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:32] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:32] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:13:32] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:13:32] "GET /database/philistudies.json?v=1779491639374 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:13:34] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:13:35] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:13:39] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:13:40] "GET /favicon.ico HTTP/1.1" 204 -
+172.25.112.1 - - [22/May/2026 20:13:42] "GET /favicon.ico HTTP/1.1" 204 -
+📊 Visitas Total: 12 | Hoje: 12127.0.0.1 - - [22/May/2026 20:18:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /src/js/main/env-loader.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /src/app/update.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /src/app/update.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /pages/suite/weather/weather.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /pages/suite/suite.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /src/styles/fonts-manager.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /src/js/main/factory.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /src/js/main/rate-limiter.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /src/styles/modes.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /src/js/main/firebase-config.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /pages/suite/liturgy.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /pages/suite/suite.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /pages/suite/weather/weather.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /src/js/main/firebase-sync.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:58] "GET /src/js/main/colors.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:59] "GET /assets/dev/WEATHER/rain.svg HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:59] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Night.svg HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:59] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:59] "GET /assets/dev/DATA/calendario.json HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:59] "GET /assets/dev/favicon/icon-192.png HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:59] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Night.svg HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 20:18:59] "GET /assets/dev/WEATHER/Moon,stars%20and%20cloud.svg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:22:12] "GET /database?path=database/files/dev HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:22:12] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:22:12] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:22:12] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:22:12] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:22:12] "GET /src/js/main/auth-gate.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:22:12] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:22:12] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:22:12] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:22:13] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:22:13] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:22:13] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:22:13] "GET /database/philistudies.json?v=1779492160371 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:22:13] "GET /favicon.ico HTTP/1.1" 204 -
+Traceback (most recent call last):
+  File "/mnt/d/Github/ATUALIZAÇÃO/site/main.py", line 8, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+⚠️ Aviso: python-dotenv nao encontrado. Usando variaveis de ambiente do sistema.
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+📊 Visitas Total: 1 | Hoje: 1172.25.112.1 - - [22/May/2026 20:33:11] "GET / HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:33:11] "GET /src/js/main/env-loader.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /pages/suite/suite.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /pages/suite/weather/weather.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /src/app/update.js HTTP/1.1" 304 -
+📊 Visitas Total: 2 | Hoje: 2172.25.112.1 - - [22/May/2026 20:33:12] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /assets/dev/avatar/avatar.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /api/config HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /src/js/main/firebase-config.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /pages/suite/santo-do-dia.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /pages/suite/weather/weather.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:12] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:13] "GET /assets/dev/DATA/calendario.json HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:13] "GET /assets/dev/WEATHER/rain.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:13] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:13] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Rain,%20Moment=Night.svg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:13] "GET /assets/dev/favicon/icon-192.png HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:33:13] "GET /database HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:33:14] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:14] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:14] "GET /src/js/main/auth-gate.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:14] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:14] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:14] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:14] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:14] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:14] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:14] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:14] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:14] "GET /database/philistudies.json?v=1779492821855 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:33:18] "POST /database/download-zip HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:33:27] "GET /database/files/dev/avatar/avatar.jpg HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:33:31] "GET /database HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:33:31] "GET /database/styles.css?v=1.0.1 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:31] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:31] "GET /src/js/main/auth-gate.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:31] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:31] "GET /database/database-mobile.css?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:31] "GET /database/js/state.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:32] "GET /database/js/file-loader.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:32] "GET /database/js/selection.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:32] "GET /database/js/preview.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:32] "GET /database/js/upload.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:32] "GET /database/js/init.js?v=1.0.0 HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:32] "GET /database/philistudies.json?v=1779492839354 HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:33:32] "GET /database/files/dev/avatar/avatar.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:33:36] "GET /database/files/dev/DATA/calendario.json HTTP/1.1" 304 -
+📊 Visitas Total: 6 | Hoje: 6172.25.112.1 - - [22/May/2026 20:34:23] "GET /calendar HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:34:51] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:51] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:51] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:51] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:51] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:51] "GET /pages/calendar/calendar.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:24] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:24] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:24] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:24] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:24] "GET /src/js/main/auth-gate.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:24] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:24] "GET /pages/calendar/calendar.js HTTP/1.1" 304 -
+📊 Visitas Total: 7 | Hoje: 7172.25.112.1 - - [22/May/2026 20:34:24] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:24] "GET /api/config HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:34:24] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:24] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+📊 Visitas Total: 8 | Hoje: 8172.25.112.1 - - [22/May/2026 20:34:30] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:34:30] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:30] "GET /pages/login/login.css HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:34:30] "📊 Visitas Total: 9 | Hoje: 9GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:30] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:30] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:30] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:30] "GET /api/config HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:34:30] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:30] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:30] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:30] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:30] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:34:30] "GET /pages/login/login-firebase.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:34:31] "GET /src/js/main/colors.js HTTP/1.1" 304 -
