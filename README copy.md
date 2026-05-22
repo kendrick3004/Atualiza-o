@@ -41,8 +41,8 @@ O projeto funciona como:
 - **API REST** — endpoints para upload/download de arquivos, gerenciamento de estrutura de dados
 - **Sistema de Manutenção** — modo de manutenção independente com páginas de erro customizadas
 - **Gerenciador de Ativos** — gera e mantém um índice JSON completo de todos os arquivos do projeto
-- **Portal de Autenticação** — login via Firebase (Google Auth Provider) com sincronização de cookies para o backend
-- **Calendário Interativo** — sistema de acompanhamento de orações (365 dias) com Firebase Sync
+- **Portal de Autenticação** — login via Firebase (Google Auth Provider)
+- **Calendário Interativo** — sistema de acompanhamento de orações com Firebase Sync
 
 ### 1.2 Arquitetura Macro
 
@@ -68,7 +68,7 @@ O projeto funciona como:
 
 | Campo | Valor |
 |-------|-------|
-| **Diretório Raiz** | `D:\Github\Atualização` |
+| **Diretório Raiz** | `D:\Github\index` |
 | **Branches Git** | `main` (atual) |
 | **Último Commit** | `Auto update` |
 | **Autor Git** | `kendrick3004` |
@@ -86,7 +86,7 @@ O projeto funciona como:
 | **ORM / Banco** | SQLAlchemy | Indefinido (usado como engine) | Interface ORM para banco de dados |
 | **Análise de Dados** | Pandas | Indefinido | Análise e processamento de dados tabulares |
 | **Interface Web** | HTML5 / CSS3 / JavaScript ES6+ | Padrões W3C | Frontend de todas as páginas |
-| **Autenticação** | Firebase Auth + Cookies | v10.8.0 | Login com Google sincronizado via cookie para o backend |
+| **Autenticação** | Firebase Realtime Database | v4.x (login.html) | Login com Google (Google Auth Provider) |
 | **CDN / Segurança** | Cloudflare (Tunnel + WAF) | Cloudflare Tunnel v2 | Proxy reverso, proteção DDoS, cache edge, workers |
 | **Controle de Versão** | Git | Git v2.x | Versionamento de código, auto-update via batch |
 | **Gerenciamento de Arquivos** | Werkzeug (secure_filename) | Indefinido | Sanitização de nomes de arquivos no upload |
@@ -187,11 +187,9 @@ O projeto funciona como:
 ### 3.1 Diagrama Completo de Todos os Arquivos
 
 ```
-D:\Github\Atualização\
+D:\Github\index\
 │
-├── 📄 .env                               ← Chaves de API e segredos (Cloudflare, Firebase, Weather)
 ├── 📄 README.md                          ← ESTE ARQUIVO — documentação completa
-├── 📄 Oque foi feito.md                  ← Checklist detalhado de correções e melhorias
 ├── 📄 a fazer.md                         ← Lista de tarefas pendentes do projeto
 ├── 📄 setup.sh                           ← Script de setup inicial (Linux/Bash)
 ├── 📄 setup_test.sh                      ← Script de teste de setup
@@ -203,11 +201,11 @@ D:\Github\Atualização\
 │   └── 📄 config.yml                     ← Configuração do tunnel (ver Seção 5)
 │
 ├── 📁 .system/                           ← Utilitários e lógica interna do sistema
-│   └── 📁 utils/                         ← Módulos compartilhados (Ex: zip_manager.py centralizado)
+│   └── 📁 utils/                         ← Módulos compartilhados (zip_manager.py, etc.)
 │
-├── 📁 .temp/                             ← Arquivos temporários e histórico persistente
-│   ├── 📁 .repo/                         ← Destino exclusivo para clones de repositórios
-│   └── 📁 .zip/                          ← Histórico de arquivos ZIP gerados (não são apagados)
+├── 📁 .temp/                             ← Arquivos temporários e histórico
+│   ├── 📁 .repo/                         ← Repositórios clonados (clones temporários)
+│   └── 📁 .zip/                          ← Histórico persistente de arquivos ZIP gerados
 │
 ├── 📁 .claude/                           ← Configuração do Claude Code
 │   └── 📄 settings.local.json           ← Configurações locais da IDE
@@ -574,26 +572,26 @@ Arquivo: `site/pages/login/login.html` e `site/pages/login/login-firebase.js`
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│                    CLOUDFLARE                       │
-│                                                     │
+│                    CLOUDFLARE                        │
+│                                                      │
 │  ┌──────────────┐    ┌──────────────────────────┐   │
-│  │   DNS Server │    │   WAF (Web App Firewall) │   │
-│  │   (Namesrv)  │    │                          │   │
-│  │              │    │  • Regras customizadas   │   │
-│  │  kendrickni -│    │  • Bloqueio SQLi         │   │
-│  │  coleti.com  │───▶│  • Rate limiting automát │   │
-│  │  → 5000      │    │  • IP blacklist          │   │
+│  │   DNS Server  │    │   WAF (Web App Firewall) │   │
+│  │   (Namesrv)   │    │                          │   │
+│  │               │    │  • Regras customizadas   │   │
+│  │  kendricknico-│    │  • Bloqueio SQLi         │   │
+│  │  leti.com     │───▶│  • Rate limiting automát │   │
+│  │  → 5000       │    │  • IP blacklist          │   │
 │  └──────────────┘    └──────────────────────────┘   │
-│                                                     │
+│                                                      │
 │  ┌──────────────┐    ┌──────────────────────────┐   │
-│  │  CDN Edge     │    │  Cloudflare Tunnel      │   │
-│  │  (Cache)      │    │  (cloudflared)          │   │
-│  │               │    │                         │   │
-│  │  TTL: 60-1800s│    │  UUID: 5bc29291-37fb-   │   │
-│  │  Cache: ON    │    │       -4e00-bc7a-       │   │
-│  │  Auto-minify  │    │       f9fbf372d037      │   │
+│  │  CDN Edge     │    │  Cloudflare Tunnel       │   │
+│  │  (Cache)      │    │  (cloudflared)            │   │
+│  │               │    │                           │   │
+│  │  TTL: 60-1800s│    │  UUID: 5bc29291-37fb-    │   │
+│  │  Cache: ON    │    │       -4e00-bc7a-         │   │
+│  │  Auto-minify  │    │       f9fbf372d037        │   │
 │  └──────────────┘    └──────────────────────────┘   │
-│                                                     │
+│                                                      │
 │  ┌──────────────┐                                   │
 │  │  DDoS Shield │                                   │
 │  │  (Always ON) │                                   │
@@ -605,14 +603,14 @@ Arquivo: `site/pages/login/login.html` e `site/pages/login/login-firebase.js`
           │
           ▼
 ┌─────────────────────────────────────────────────────┐
-│              SERVIDOR LOCAL                         │
-│  ┌─────────────────────────────────────────────┐    │
-│  │  Flask App (:5000)                          │    │
-│  │  ├── site/main.py                           │    │
-│  │  ├── site/routes.py                         │    │
-│  │  ├── maintenance/main.py                    │    │
-│  │  └── database/generate_assets_structure.py  │    │
-│  └─────────────────────────────────────────────┘    │
+│              SERVIDOR LOCAL                          │
+│  ┌─────────────────────────────────────────────┐   │
+│  │  Flask App (:5000)                          │   │
+│  │  ├── site/main.py                           │   │
+│  │  ├── site/routes.py                         │   │
+│  │  ├── maintenance/main.py                    │   │
+│  │  └── database/generate_assets_structure.py  │   │
+│  └─────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────┘
 ```
 
@@ -1890,11 +1888,7 @@ Este README foi gerado a partir da **análise completa** de todos os arquivos do
 
 ## 19. Histórico de Modificações
 
-### [2026-05-22 20:30]
-- **Expansão do Calendário (365 Dias)**: Removida a trava de data que impedia a visualização de progresso futuro. O calendário agora processa e exibe estatísticas para o ano completo (365 dias) de forma fluida.
-- **Sincronização de Autenticação (Cookies)**: Implementada a geração automática do cookie `firebase_auth_token` no frontend após o login com Google/Firebase. Isso resolve o problema de redirecionamento indevido em rotas protegidas do backend (upload/download).
-- **Estrutura de Temporários (.temp)**: Reorganizada a pasta `.temp` com subpastas `.repo` (para clones) e `.zip` (para histórico persistente de downloads). Adicionados arquivos `.gitkeep` para preservar a estrutura no Git.
-- **Correção de Inicialização (Boot)**: Resolvido um erro crítico de `ImportError` em `site/routes.py` causado por uma referência de função desatualizada após a migração para o módulo `.system`.
+### [2026-05-22 10:45]
 - **Arquitetura do Sistema (.system)**: Criada a pasta oculta `.system` para centralizar utilitários e lógica interna do servidor.
 - **Centralização de Zipagem**: Movida a lógica de compressão de arquivos para `.system/utils/zip_manager.py`, permitindo que múltiplos módulos (site, database, temas) utilizem o mesmo sistema de compartilhamento de forma modular.
 - **Organização Estrutural**: A pasta `maintenance` foi mantida na raiz por requisito operacional, mas os scripts de inicialização e rotas foram validados para garantir a coexistência com a nova estrutura `.system`.

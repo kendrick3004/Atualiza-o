@@ -203,7 +203,7 @@ body.dark-mode .month-header {
     grid-template-columns: repeat(7, 1fr);
     gap: 4px;
     padding: 12px;
-    max-height: 400px;
+    max-height: 1000px; /* Aumentado para suportar meses longos sem corte */
     overflow: hidden;
     transition: all 0.3s ease;
 }

@@ -336,3 +336,21 @@ Press CTRL+C to quit
 172.25.112.1 - - [22/May/2026 19:55:44] "GET /assets/dev/WEATHER/Moon,stars%20and%20cloud.svg HTTP/1.1" 304 -
 172.25.112.1 - - [22/May/2026 19:55:44] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
 172.25.112.1 - - [22/May/2026 19:55:44] "GET /assets/dev/TEMPLATES_WEATHER/Weather=Cloudy,%20Moment=Night.svg HTTP/1.1" 304 -
+📊 Visitas Total: 4 | Hoje: 4172.25.112.1 - - [22/May/2026 19:57:30] "GET /calendar HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 19:57:30] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:30] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:30] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:30] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:30] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:30] "GET /pages/calendar/calendar.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:31] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:31] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:31] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:31] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:31] "GET /src/js/main/auth-gate.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:31] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:31] "GET /pages/calendar/calendar.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:31] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:31] "GET /assets/dev/templates/light_mode.jpg HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 19:57:31] "GET /assets/dev/templates/dark_mode.jpg HTTP/1.1" 304 -
+📊 Visitas Total: 5 | Hoje: 5127.0.0.1 - - [22/May/2026 20:02:42] "GET /wp-login.php HTTP/1.1" 404 -

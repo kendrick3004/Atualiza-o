@@ -214,16 +214,13 @@ function updateProgressSummary() {
     const today = new Date();
     const currentYear = today.getFullYear();
     
-    // Contar dias de todos os 12 meses do ano
+    // Contar dias de todos os 12 meses do ano (365 dias)
     for (let month = 0; month < 12; month++) {
         const date = new Date(currentYear, month, 1);
         const daysInMonth = new Date(currentYear, month + 1, 0).getDate();
         
         for (let day = 1; day <= daysInMonth; day++) {
-            // Só contar se o dia for hoje ou no passado
-            const checkDate = new Date(currentYear, month, day);
-            if (checkDate > today) continue;
-
+            // Removida a trava de "hoje ou passado" para permitir visualização de todo o ano (365 dias)
             const dateStr = `${currentYear}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
             const progress = getDayProgress(dateStr);
             
