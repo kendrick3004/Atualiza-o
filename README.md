@@ -1937,3 +1937,9 @@ Este README foi gerado a partir da **análise completa** de todos os arquivos do
 - **Sincronização de Inicialização** — Implementada a função `window.waitForFirebase()` no `firebase-config.js`, que permite que outros scripts aguardem a conclusão do carregamento das chaves e do SDK antes de realizar chamadas de autenticação.
 - **Refatoração da Página de Login** — O `login.html` e o `login-firebase.js` foram atualizados para utilizar o novo mecanismo de espera, garantindo que `firebase.auth()` esteja disponível antes de qualquer interação do usuário.
 - **Arquivos Modificados**: `site/src/js/main/firebase-config.js`, `site/pages/login.html`, `site/pages/login/login-firebase.js`.
+
+### [2026-05-22 21:55]
+- **Sincronização Final de Produção** — Todas as melhorias validadas nos arquivos de teste (`setup_copy.sh` e `start_copy.sh`) foram migradas para os arquivos oficiais (`setup.sh` e `start.sh`).
+- **Compatibilidade Ubuntu 24.04** — O instalador oficial agora suporta o ambiente gerenciado externamente do Ubuntu 24.04, utilizando as flags de escape do pip.
+- **Robustez do Cloudflare Tunnel** — O processo de instalação do túnel como serviço systemd foi padronizado nos scripts oficiais, garantindo persistência.
+- **Ambiente Centralizado** — O carregamento de variáveis do `.env` foi padronizado para usar o comando `source`, garantindo que o token do Cloudflare e as chaves de API estejam sempre disponíveis para o sistema e para o Flask.

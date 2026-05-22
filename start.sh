@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# start.sh - Script de Deploy e Inicialização
 set -u
 
 # Carregar variaveis de ambiente do arquivo .env
