@@ -18,14 +18,24 @@ sudo apt update
 
 # Instala pacotes do sistema solicitados e essenciais
 log "[2/3] Instalando pacotes do sistema e dependencias Python"
-sudo apt install -y nano curl wget openssh-server net-tools git python3 python3-pip python3-venv
+# No Ubuntu 24.04+, a forma correta e segura de instalar o Flask e Dotenv globalmente é via APT
+# Isso evita o erro de "externally-managed-environment" do pip.
+sudo apt install -y \
+    nano \
+    curl \
+    wget \
+    openssh-server \
+    net-tools \
+    git \
+    python3 \
+    python3-pip \
+    python3-venv \
+    python3-flask \
+    python3-dotenv \
+    python3-werkzeug \
+    python3-blinker
 
-# No Ubuntu 24.04+ (Noble), o pip é bloqueado para evitar quebrar o sistema.
-# O erro do 'blinker' ocorre porque o sistema tenta desinstalar uma versão do SO.
-# Vamos usar --ignore-installed para forçar a nossa versão sem tentar remover a do sistema.
-log "Instalando bibliotecas Python necessárias..."
-sudo pip3 install flask python-dotenv werkzeug --break-system-packages --ignore-installed blinker || \
-sudo pip3 install flask python-dotenv werkzeug --break-system-packages
+log "✅ Dependências Python instaladas via APT com sucesso!"
 
 log "[3/3] Configurando o Cloudflared Tunnel (Persistente)"
 # Add cloudflare gpg key
@@ -45,7 +55,6 @@ log "Chave GPG adicionada com sucesso"
 # Carregar variaveis de ambiente do arquivo .env (obrigatório)
 log "Carregando variaveis de ambiente do .env..."
 if [ -f ".env" ]; then
-    # Usar uma forma mais segura de exportar variáveis
     set -a
     source .env
     set +a
