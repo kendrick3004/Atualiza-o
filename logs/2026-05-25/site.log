@@ -280,3 +280,67 @@ Press CTRL+C to quit
 172.25.112.1 - - [25/May/2026 20:56:39] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 304 -
 127.0.0.1 - - [25/May/2026 20:59:37] "GET /database HTTP/1.1" 302 -
 📊 Visitas Total: 17 | Hoje: 17127.0.0.1 - - [25/May/2026 20:59:38] "GET /login?redirect=/database? HTTP/1.1" 200 -
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+📊 Visitas Total: 1 | Hoje: 1172.25.112.1 - - [25/May/2026 21:03:46] "GET /calendar HTTP/1.1" 200 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /pages/calendar/calendar.css HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /src/js/main/auth-gate.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /pages/calendar/calendar.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:46] "GET /api/config HTTP/1.1" 200 -
+📊 Visitas Total: 2 | Hoje: 2172.25.112.1 - - [25/May/2026 21:03:47] "GET /calendar HTTP/1.1" 200 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /pages/calendar/calendar.css HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /src/js/main/auth-gate.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /pages/calendar/calendar.js HTTP/1.1" 304 -
+172.25.112.1 - - [25/May/2026 21:03:47] "GET /api/config HTTP/1.1" 200 -
+📊 Visitas Total: 3 | Hoje: 3127.0.0.1 - - [25/May/2026 21:03:49] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/May/2026 21:03:49] "GET /api/config HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 21:03:49] "GET /assets/dev/DATA/calendario.json HTTP/1.1" 304 -
+📊 Visitas Total: 4 | Hoje: 4127.0.0.1 - - [25/May/2026 21:03:51] "GET /login?redirect=/database HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 21:03:51] "GET /api/config HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 21:03:51] "GET /pages/login/login-firebase.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/May/2026 21:03:51] "GET /src/js/main/config.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/May/2026 21:03:51] "GET /pages/login/login.css HTTP/1.1" 304 -
+📊 Visitas Total: 5 | Hoje: 5127.0.0.1 - - [25/May/2026 21:03:54] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 21:03:54] "GET /api/config HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 21:03:54] "GET /pages/calendar/calendar.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 21:03:54] "GET /pages/calendar/calendar.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 21:03:54] "GET /src/js/main/auth-gate.js HTTP/1.1" 200 -
+📊 Visitas Total: 6 | Hoje: 6127.0.0.1 - - [25/May/2026 21:04:07] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 21:04:07] "GET /api/config HTTP/1.1" 200 -
+📊 Visitas Total: 7 | Hoje: 7127.0.0.1 - - [25/May/2026 21:04:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 21:04:09] "GET /api/config HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 21:04:09] "GET /assets/dev/DATA/calendario.json HTTP/1.1" 304 -
+📊 Visitas Total: 8 | Hoje: 8127.0.0.1 - - [25/May/2026 21:04:10] "GET /calendar HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 21:04:10] "GET /api/config HTTP/1.1" 200 -
+📊 Visitas Total: 9 | Hoje: 9127.0.0.1 - - [25/May/2026 21:04:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 21:04:11] "GET /api/config HTTP/1.1" 200 -
+127.0.0.1 - - [25/May/2026 21:04:11] "GET /assets/dev/DATA/calendario.json HTTP/1.1" 304 -
