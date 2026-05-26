@@ -1,5 +1,25 @@
 #!/bin/bash
 
+# ==============================================================================
+# start_copy.sh - Script de Deploy e Inicialização Local (Sem Download)
+# ==============================================================================
+# Descrição:
+#   Este script é responsável por inicializar o servidor utilizando os arquivos
+#   já existentes na pasta local 'site' (sem baixar do GitHub):
+#   1. Encerra servidores existentes (site e manutenção).
+#   2. Ativa o modo de manutenção temporário na porta 5000.
+#   3. Mantém a pasta 'site' existente (não apaga nem clona nada do GitHub).
+#   4. Reconstrói/atualiza a estrutura do banco de dados (generate_assets_structure.py).
+#   5. Verifica a conectividade do Cloudflare Tunnel.
+#   6. Encerra a manutenção e inicia o servidor do site principal.
+#   7. Se houver falhas na inicialização do site ou do túnel, restaura a manutenção.
+#
+# Diferenças chave vs start.sh:
+#   - start.sh: Executa clonagem limpa do GitHub a cada deploy (ideal para produção).
+#   - start_copy.sh: Pula o download e usa os arquivos locais na pasta 'site'
+#     (ideal para desenvolvimento ou deploys offline rápidos).
+# ==============================================================================
+
 set -u
 
 # Pega o diretório onde o script está localizado
@@ -92,15 +112,15 @@ if check_cloudflare; then
     sleep 2
     
     log "🚀 Iniciando servidor do site..."
-       if cd "$BASE_DIR/site"; then
-    nohup python3 main.py >> "$SITE_LOG" 2>&1 &
+    if cd "$BASE_DIR/site"; then
+        nohup python3 main.py >> "$SITE_LOG" 2>&1 &
     else
         log "❌ Erro ao acessar diretório do site para iniciar o servidor"
         exit 1
     fi
     sleep 3
-    
-  if pgrep -f "python3 main.py" > /dev/null 2>&1; then
+
+    if pgrep -f "python3 main.py" > /dev/null 2>&1; then
         log "✅ Servidor do site iniciado com sucesso!"
         log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
         log "✅ DEPLOY FINALIZADO COM SUCESSO!"
@@ -111,7 +131,7 @@ if check_cloudflare; then
     fi
 else
     log "⚠️ Cloudflare Tunnel falhou. Mantendo modo manutenção para segurança."
-        log "🔔 Por favor, verifique o serviço 'cloudflared' ou as variáveis de ambiente."
+    log "🔔 Por favor, verifique o serviço 'cloudflared' ou as variáveis de ambiente."
 fi
 
 log "📊 Logs salvos em: $LOG_DIR"

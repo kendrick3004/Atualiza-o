@@ -806,3 +806,65 @@ Press CTRL+C to quit
 172.25.112.1 - - [22/May/2026 20:36:40] "GET /src/styles/modes.css HTTP/1.1" 304 -
 172.25.112.1 - - [22/May/2026 20:36:40] "GET /pages/login/login-firebase.js HTTP/1.1" 304 -
 172.25.112.1 - - [22/May/2026 20:36:40] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+📊 Visitas Total: 1 | Hoje: 1172.25.112.1 - - [22/May/2026 20:42:28] "GET /login?redirect=/calendar HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:42:28] "GET /src/js/main/env-loader.js HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:42:28] "GET /pages/login/login.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:28] "GET /src/js/main/factory.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:28] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:28] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:28] "GET /src/app/update.js HTTP/1.1" 304 -
+📊 Visitas Total: 2 | Hoje: 2172.25.112.1 - - [22/May/2026 20:42:28] "GET /api/config HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:42:29] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:29] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:29] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:29] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:29] "GET /pages/login/login-firebase.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:29] "GET /src/js/main/colors.js HTTP/1.1" 304 -
+📊 Visitas Total: 3 | Hoje: 3172.25.112.1 - - [22/May/2026 20:43:06] "GET /calendar HTTP/1.1" 200 -
+172.25.112.1 - - [22/May/2026 20:43:07] "GET /src/styles/modes.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:39] "GET /src/styles/fonts-manager.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:39] "GET /src/js/main/env-loader.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:39] "GET /src/app/update.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:39] "GET /src/js/main/config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:39] "GET /src/app/update.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:39] "GET /pages/calendar/calendar.css HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:40] "GET /src/js/main/rate-limiter.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:40] "GET /src/js/main/auth-gate.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:40] "GET /src/js/main/firebase-config.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:40] "GET /src/js/main/firebase-sync.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:40] "GET /pages/suite/suite.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:40] "GET /pages/calendar/calendar.js HTTP/1.1" 304 -
+172.25.112.1 - - [22/May/2026 20:42:40] "GET /pages/suite/liturgy.js HTTP/1.1" 304 -
+📊 Visitas Total: 4 | Hoje: 4172.25.112.1 - - [22/May/2026 20:42:40] "GET /api/config HTTP/1.1" 200 -
+📊 Visitas Total: 5 | Hoje: 5127.0.0.1 - - [22/May/2026 20:43:56] "GET / HTTP/1.1" 200 -
+📊 Visitas Total: 6 | Hoje: 6127.0.0.1 - - [22/May/2026 20:48:29] "GET /.git/config HTTP/1.1" 404 -
+📊 Visitas Total: 7 | Hoje: 7127.0.0.1 - - [22/May/2026 20:52:17] "GET /robots.txt HTTP/1.1" 404 -
+📊 Visitas Total: 8 | Hoje: 8127.0.0.1 - - [22/May/2026 20:52:06] "GET / HTTP/1.1" 200 -
+📊 Visitas Total: 9 | Hoje: 9127.0.0.1 - - [22/May/2026 20:52:21] "GET /pages/calendar HTTP/1.1" 404 -
+📊 Visitas Total: 10 | Hoje: 10127.0.0.1 - - [22/May/2026 20:52:37] "GET /pages/login HTTP/1.1" 404 -
+
+🚀 Servidor ONLINE na porta 5000
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.118.129:5000
+Press CTRL+C to quit
+📊 Visitas Total: 1 | Hoje: 1127.0.0.1 - - [22/May/2026 21:05:26] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 21:05:54] "GET /assets/dev/DATA/calendario.json HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 21:05:29] "GET /database HTTP/1.1" 302 -
+📊 Visitas Total: 3 | Hoje: 3127.0.0.1 - - [22/May/2026 21:05:29] "GET /login?redirect=/database? HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 21:05:29] "GET /pages/login/login-firebase.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 21:05:29] "GET /pages/login/login.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 21:05:29] "GET /src/js/main/config.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/May/2026 21:05:29] "GET /assets/dev/favicon/Favicon.png HTTP/1.1" 200 -

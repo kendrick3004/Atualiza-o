@@ -26,6 +26,7 @@ def register_routes(app, config):
     registrar_log = config['registrar_log']
     generate_structure_json = config['generate_structure_json']
     send_error_file = config['send_error_file']
+    redact_ip = config.get('redact_ip', lambda ip: ip)
 
     # --- Rotas de Páginas Principais ---
     
@@ -122,7 +123,7 @@ def register_routes(app, config):
             filepath = os.path.join(dest_folder, filename)
             file.save(filepath)
             uploaded_count += 1
-            registrar_log(f"⬆️ Upload: {client_ip} enviou {filename} -> {dest_folder}", log_type='database')
+            registrar_log(f"⬆️ Upload: {redact_ip(client_ip)} enviou {filename} -> {dest_folder}", log_type='database')
             
             # Otimização: Não chamamos generate_structure_json(filepath) aqui para múltiplos arquivos
             # Chamaremos uma vez ao final para a pasta de destino para ser mais eficiente
@@ -130,7 +131,7 @@ def register_routes(app, config):
         
         # Atualização única para a pasta de destino (ou regeneração completa se preferir)
         # Como o script atualiza um arquivo por vez ou tudo, vamos disparar uma atualização da pasta
-        generate_structure_json() 
+        generate_structure_json(dest_folder) 
         
         return jsonify({
             "message": f"{uploaded_count} arquivo(s) enviados com sucesso",
@@ -148,11 +149,17 @@ def register_routes(app, config):
     @app.route('/database/<path:filename>')
     @require_auth
     def serve_database_files(filename):
-        site_database_dir = os.path.join(os.path.dirname(__file__), 'database')
-        target_path = os.path.join(site_database_dir, filename)
+        # Corrigido: Usar DATABASE_DIR definido no config
+        target_path = os.path.join(DATABASE_DIR, filename)
         if os.path.exists(target_path):
+            return send_from_directory(DATABASE_DIR, filename)
+        
+        # Fallback para pasta database local se existir (legado)
+        site_database_dir = os.path.join(os.path.dirname(__file__), 'database')
+        if os.path.exists(os.path.join(site_database_dir, filename)):
             return send_from_directory(site_database_dir, filename)
-        return send_from_directory(DATABASE_DIR, filename)
+            
+        return jsonify({"error": "Arquivo não encontrado"}), 404
 
     # --- Rota de Download com Compressao no Servidor ---
 
@@ -173,7 +180,7 @@ def register_routes(app, config):
             
             # Registrar apenas no log que o ZIP foi gerado
             client_ip = request.remote_addr
-            registrar_log(f"📦 [ZIP] Servidor gerou e salvou pacote em {zip_path} para {client_ip}", log_type='database')
+            registrar_log(f"📦 [ZIP] Servidor gerou e salvou pacote em {zip_path} para {redact_ip(client_ip)}", log_type='database')
             
             # Envia o arquivo salvo fisicamente
             return send_file(

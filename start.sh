@@ -1,6 +1,26 @@
 #!/bin/bash
 
-# start.sh - Script de Deploy e Inicialização
+# ==============================================================================
+# start.sh - Script de Deploy e Inicialização Completa
+# ==============================================================================
+# Descrição:
+#   Este script é responsável por realizar o fluxo completo de deploy do site:
+#   1. Encerra servidores existentes (site e manutenção).
+#   2. Ativa o modo de manutenção temporário na porta 5000.
+#   3. Realiza o download (git clone com timeout) da última versão do repositório
+#      público (https://github.com/kendrick3004/Atualiza-o.git) em uma pasta temporária.
+#   4. Copia os novos arquivos para a pasta 'site'.
+#   5. Reconstrói/atualiza a estrutura do banco de dados (generate_assets_structure.py).
+#   6. Verifica a conectividade do Cloudflare Tunnel.
+#   7. Encerra a manutenção e inicia o servidor do site principal.
+#   8. Se houver falhas na inicialização do site ou do túnel, restaura a manutenção.
+#
+# Diferenças chave vs start_copy.sh:
+#   - start.sh: Executa clonagem limpa do GitHub a cada deploy (ideal para produção).
+#   - start_copy.sh: Pula o download e usa os arquivos locais na pasta 'site'
+#     (ideal para desenvolvimento ou deploys offline rápidos).
+# ==============================================================================
+
 set -u
 
 # Carregar variaveis de ambiente do arquivo .env
@@ -115,7 +135,7 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$CLONE_SUCCESS" = false ]; do
 
     log "📊 Iniciando clonagem..."
 
-    timeout 600 git clone \
+    timeout 1200 git clone \
         --depth=1 \
         --single-branch \
         --branch main \
@@ -244,15 +264,15 @@ if check_cloudflare; then
     sleep 2
     
     log "🚀 Iniciando servidor do site..."
-       if cd "$BASE_DIR/site"; then
-    nohup python3 main.py >> "$SITE_LOG" 2>&1 &
+    if cd "$BASE_DIR/site"; then
+        nohup python3 main.py >> "$SITE_LOG" 2>&1 &
     else
         log "❌ Erro ao acessar diretório do site para iniciar o servidor"
         exit 1
     fi
     sleep 3
-    
-  if pgrep -f "python3 main.py" > /dev/null 2>&1; then
+
+    if pgrep -f "python3 main.py" > /dev/null 2>&1; then
         log "✅ Servidor do site iniciado com sucesso!"
         log "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
         log "✅ DEPLOY FINALIZADO COM SUCESSO!"
@@ -263,7 +283,7 @@ if check_cloudflare; then
     fi
 else
     log "⚠️ Cloudflare Tunnel falhou. Mantendo modo manutenção para segurança."
-        log "🔔 Por favor, verifique o serviço 'cloudflared' ou as variáveis de ambiente."
+    log "🔔 Por favor, verifique o serviço 'cloudflared' ou as variáveis de ambiente."
 fi
 
 log "📊 Logs salvos em: $LOG_DIR"

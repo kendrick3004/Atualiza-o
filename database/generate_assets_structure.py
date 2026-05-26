@@ -54,6 +54,149 @@ def get_file_info(path, project_root):
     except Exception:
         return None
 
+def ensure_parent_links(structure, abs_dir, target_dir, database_dir):
+    """
+    Ensures that abs_dir and all its parent directories up to target_dir
+    exist in the structure and are correctly linked in their parents' "folders" lists.
+    """
+    abs_dir = os.path.abspath(abs_dir)
+    abs_target = os.path.abspath(target_dir)
+    
+    if abs_dir == abs_target:
+        if "database_root" not in structure:
+            structure["database_root"] = {"files": [], "folders": []}
+        return
+        
+    parent_dir = os.path.dirname(abs_dir)
+    abs_parent = os.path.abspath(parent_dir)
+    
+    # Recursively ensure parent links exist first
+    ensure_parent_links(structure, abs_parent, target_dir, database_dir)
+    
+    if abs_parent == abs_target:
+        parent_key = "database_root"
+    else:
+        rel_parent = os.path.relpath(abs_parent, database_dir).replace(os.sep, "/")
+        parent_key = "database/" + rel_parent
+        
+    rel_dir = os.path.relpath(abs_dir, database_dir).replace(os.sep, "/")
+    dir_key = "database/" + rel_dir
+    dir_name = os.path.basename(abs_dir)
+    
+    if dir_key not in structure:
+        structure[dir_key] = {"files": [], "folders": []}
+        
+    if parent_key in structure:
+        folders_list = structure[parent_key].setdefault("folders", [])
+        exists = any(f["id"] == dir_key for f in folders_list)
+        if not exists:
+            try:
+                folders_list.append({
+                    "id": dir_key,
+                    "name": dir_name,
+                    "path": dir_key,
+                    "modified": int(os.path.getmtime(abs_dir) * 1000),
+                })
+            except Exception:
+                pass
+
+def update_dir_contents(structure, abs_dir, target_dir, project_root, database_dir):
+    """
+    Scans the immediate contents of abs_dir and updates its entry in structure.
+    """
+    abs_dir = os.path.abspath(abs_dir)
+    abs_target = os.path.abspath(target_dir)
+    
+    if abs_dir == abs_target:
+        dir_key = "database_root"
+    else:
+        rel_dir = os.path.relpath(abs_dir, database_dir).replace(os.sep, "/")
+        dir_key = "database/" + rel_dir
+        
+    files = []
+    folders = []
+    
+    try:
+        for item in os.listdir(abs_dir):
+            if item in ["__pycache__", ".git"]:
+                continue
+            item_path = os.path.join(abs_dir, item)
+            if os.path.isdir(item_path):
+                folder_id = "database/" + os.path.relpath(item_path, database_dir).replace("\\", "/")
+                try:
+                    folders.append({
+                        "id": folder_id,
+                        "name": item,
+                        "path": folder_id,
+                        "modified": int(os.path.getmtime(item_path) * 1000),
+                    })
+                except Exception:
+                    pass
+            else:
+                if item in ["generate_assets_structure.py", "philistudies.json"]:
+                    continue
+                file_info = get_file_info(item_path, project_root)
+                if file_info:
+                    files.append(file_info)
+    except Exception:
+        pass
+        
+    if dir_key not in structure:
+        structure[dir_key] = {}
+    structure[dir_key]["files"] = files
+    structure[dir_key]["folders"] = folders
+
+def update_incremental(structure, path, target_dir, project_root, database_dir):
+    """
+    Updates the JSON structure incrementally for a modified file or directory.
+    """
+    abs_path = os.path.abspath(path)
+    if not os.path.exists(abs_path):
+        # Handle deletion
+        rel_from_db = os.path.relpath(abs_path, database_dir).replace(os.sep, "/")
+        json_key = "database/" + rel_from_db
+        if json_key in structure:
+            del structure[json_key]
+        
+        parent_dir = os.path.dirname(abs_path)
+        abs_parent = os.path.abspath(parent_dir)
+        abs_target = os.path.abspath(target_dir)
+        if abs_parent == abs_target:
+            parent_key = "database_root"
+        else:
+            rel_parent = os.path.relpath(abs_parent, database_dir).replace(os.sep, "/")
+            parent_key = "database/" + rel_parent
+        
+        name = os.path.basename(abs_path)
+        if parent_key in structure:
+            structure[parent_key]["files"] = [f for f in structure[parent_key].get("files", []) if f["name"] != name]
+            structure[parent_key]["folders"] = [d for d in structure[parent_key].get("folders", []) if d["name"] != name]
+        return structure
+
+    if os.path.isdir(abs_path):
+        ensure_parent_links(structure, abs_path, target_dir, database_dir)
+        update_dir_contents(structure, abs_path, target_dir, project_root, database_dir)
+    else:
+        parent_dir = os.path.dirname(abs_path)
+        ensure_parent_links(structure, parent_dir, target_dir, database_dir)
+        
+        abs_parent = os.path.abspath(parent_dir)
+        abs_target = os.path.abspath(target_dir)
+        if abs_parent == abs_target:
+            parent_key = "database_root"
+        else:
+            rel_parent = os.path.relpath(abs_parent, database_dir).replace(os.sep, "/")
+            parent_key = "database/" + rel_parent
+            
+        file_info = get_file_info(abs_path, project_root)
+        if file_info:
+            if parent_key not in structure:
+                structure[parent_key] = {"files": [], "folders": []}
+            structure[parent_key]["files"] = [f for f in structure[parent_key]["files"] if f["name"] != file_info["name"]]
+            structure[parent_key]["files"].append(file_info)
+            
+    return structure
+
 def generate_structure(target_dir, project_root, specific_file=None):
     """
     Scans the 'files' directory and generates a JSON structure representing the database.
@@ -119,30 +262,8 @@ def generate_structure(target_dir, project_root, specific_file=None):
 
             structure[json_key] = current_entry
     else:
-        # Atualização incremental para um arquivo específico
-        abs_file_path = os.path.abspath(specific_file)
-        file_dir = os.path.dirname(abs_file_path)
-        abs_file_dir = os.path.abspath(file_dir)
-        abs_target = os.path.abspath(target_dir)
-        
-        if abs_file_dir == abs_target:
-            json_key = "database_root"
-        else:
-            rel_from_db = os.path.relpath(abs_file_dir, database_dir).replace(os.sep, "/")
-            json_key = "database/" + rel_from_db
-        
-        file_info = get_file_info(abs_file_path, project_root)
-        if file_info:
-            if json_key not in structure:
-                structure[json_key] = {"files": [], "folders": []}
-            
-            # Remover versão antiga se existir
-            structure[json_key]["files"] = [f for f in structure[json_key]["files"] if f["name"] != file_info["name"]]
-            # Adicionar nova versão
-            structure[json_key]["files"].append(file_info)
-            
-            # Garantir que as pastas pai existam na estrutura (simplificado)
-            # Em um sistema real, poderíamos subir a árvore, mas aqui focamos no arquivo
+        # Atualização incremental inteligente
+        structure = update_incremental(structure, specific_file, target_dir, project_root, database_dir)
             
     return structure
 

@@ -4,6 +4,19 @@ import time
 import datetime
 from collections import defaultdict
 
+# Carregar variaveis de ambiente do arquivo .env
+try:
+    from dotenv import load_dotenv
+    # Procura o .env na raiz do projeto (um nível acima de maintenance/)
+    env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '.env')
+    if os.path.exists(env_path):
+        load_dotenv(env_path)
+    else:
+        load_dotenv()  # Tenta carregar do diretório atual
+except ImportError:
+    # Fallback caso python-dotenv nao esteja instalado
+    print("⚠️ Aviso: python-dotenv nao encontrado. Usando variaveis de ambiente do sistema.")
+
 # Garantir caminhos absolutos para o diretório do script
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -17,6 +30,25 @@ request_counts = defaultdict(lambda: {'count': 0, 'timestamp': 0})
 # Caminho para a pasta de logs na raiz do projeto (index/logs)
 PROJECT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, '..'))
 LOG_BASE_DIR = os.path.join(PROJECT_DIR, 'logs')
+
+def redact_ip(ip):
+    """Pseudonimiza o endereço IP para privacidade"""
+    if not ip: return "0.0.0.0"
+    parts = ip.split('.')
+    if len(parts) == 4:
+        return f"{parts[0]}.{parts[1]}.xxx.xxx"
+    return "xxx.xxx.xxx.xxx"
+
+# Sobrescrever log_message do Werkzeug para mascarar IPs nos logs de servidor
+try:
+    from werkzeug.serving import WSGIRequestHandler
+    def new_log_message(self, format, *args):
+        ip = self.address_string()
+        redacted = redact_ip(ip)
+        self.log("info", f"{redacted} - - %s", format % args)
+    WSGIRequestHandler.log_message = new_log_message
+except Exception as e:
+    print(f"⚠️ Aviso: Não foi possível aplicar máscara de IP nos logs do Werkzeug: {e}")
 
 def registrar_log(mensagem):
     """Salva a mensagem no arquivo de log do dia na pasta de manutenção."""
@@ -52,6 +84,7 @@ def maintenance_logic():
 
     # Proteção contra ataques
     client_ip = request.remote_addr
+    redacted_ip = redact_ip(client_ip)
     current_time = time.time()
     if current_time - request_counts[client_ip]['timestamp'] > RATE_LIMIT_PERIOD:
         request_counts[client_ip] = {'count': 1, 'timestamp': current_time}
@@ -59,10 +92,10 @@ def maintenance_logic():
         request_counts[client_ip]['count'] += 1
 
     if request_counts[client_ip]['count'] > RATE_LIMIT_COUNT:
-        registrar_log(f"⚠️ BLOQUEIO (Manutenção): IP {client_ip}")
+        registrar_log(f"⚠️ BLOQUEIO (Manutenção): IP {redacted_ip}")
         return send_from_directory(SCRIPT_DIR, '429.html'), 429
     
-    registrar_log(f"🚧 Acesso em Manutenção: {client_ip} -> {request.path}")
+    registrar_log(f"🚧 Acesso em Manutenção: {redacted_ip} -> {request.path}")
 
 @app.route('/')
 def index():

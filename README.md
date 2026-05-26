@@ -1943,3 +1943,22 @@ Este README foi gerado a partir da **análise completa** de todos os arquivos do
 - **Compatibilidade Ubuntu 24.04** — O instalador oficial agora suporta o ambiente gerenciado externamente do Ubuntu 24.04, utilizando as flags de escape do pip.
 - **Robustez do Cloudflare Tunnel** — O processo de instalação do túnel como serviço systemd foi padronizado nos scripts oficiais, garantindo persistência.
 - **Ambiente Centralizado** — O carregamento de variáveis do `.env` foi padronizado para usar o comando `source`, garantindo que o token do Cloudflare e as chaves de API estejam sempre disponíveis para o sistema e para o Flask.
+
+### [2026-05-25 20:25]
+- **Reorganização Geral do Relatório de Erros (`erros_a_ver.md`)**: Consolidado o relatório e checklist em um documento limpo, unificado e estruturado por prioridades, contendo descrições técnicas detalhadas e trechos de código/linha para cada item a ser tratado.
+- **Redução de Poluição de Logs no Contador de Visitas (`site/main.py`)**: Implementado limite condicional para escrita de logs de requisição no endpoint `/api/config`. O log agora é gravado apenas na primeira chamada e a cada 100 chamadas adicionais para evitar spam de escrita.
+- **Variáveis de Ambiente no Modo Manutenção (`maintenance/main.py`)**: Adicionado o carregamento de variáveis de ambiente com `python-dotenv` com fallback robusto procurando o `.env` tanto na raiz do projeto quanto no diretório do sistema ou variáveis ambientais pré-definidas.
+- **Timeout Ampliado no Script de Deploy (`start.sh`)**: Alterado o timeout do comando `git clone` de 600 segundos para 1200 segundos (20 minutos) no script principal para evitar falhas durante o deploy automático sob conexões instáveis ou clonagens pesadas.
+- **Mecanismo de Atualização Incremental Inteligente do Database (`database/generate_assets_structure.py`)**: Refatorada a rotina de sincronização incremental. Quando disparada para uma pasta ou arquivo modificado, ela detecta o tipo de recurso, reconstrói recursivamente todas as chaves pai ausentes no JSON para manter a consistência da árvore e gerencia de forma limpa remoções físicas de arquivos e diretórios na base indexada.
+- **Integração de Sincronização Otimizada (`site/routes.py`)**: Ajustada a rota de upload para invocar o atualizador de estrutura passando apenas o diretório de destino (`dest_folder`). Isso acelera significativamente o processamento e evita recargas redundantes do filesystem completo após múltiplos uploads de arquivos.
+- **Acompanhamento no Checklist (`erros_a_ver.md`)**: Marcadas como resolvidas as seções de Erros de Código, Dependências, Desempenho (JSON Incremental) e Contador de Visitas.
+
+### [2026-05-25 20:40]
+- **Mascaramento e Redação de IPs (Segurança)**: Implementada a função `redact_ip` em `site/main.py` e `maintenance/main.py` para mascarar o endereço IP do cliente (ex: `127.0.xxx.xxx` / `xxx.xxx.xxx.xxx`), protegendo a privacidade dos usuários nos arquivos de log.
+- **Intercepção de Logs do Flask (Werkzeug)**: Sobrescrito o método `WSGIRequestHandler.log_message` em `site/main.py` e `maintenance/main.py` para mascarar automaticamente os IPs em todas as requisições mostradas no console e gravadas no stdout/stderr redirecionado.
+- **Anonimização nas Rotas**: Integrado o mascaramento de IP nos logs de upload de arquivos e na compactação ZIP do servidor em `site/routes.py`.
+- **Limpeza Automatizada de Logs**: Desenvolvido o script Bash `cleanup_logs.sh` para exclusão segura de pastas de logs no formato `YYYY-MM-DD` com mais de 90 dias (ou idade parametrizável), incluindo suporte a simulação (`--dry-run`).
+- **Correção e Documentação dos Scripts Bash**:
+  - Corrigidos erros de indentação inconsistente no bloco de inicialização do site em `start.sh` (linhas 247-267).
+  - Adicionados cabeçalhos de documentação explicativos em `start.sh`, `start_copy.sh` e `start_maintenance.sh` detalhando seus fluxos de deploy e as diferenças entre eles (como o repositório Git alternativo clonado em `start_maintenance.sh`).
+

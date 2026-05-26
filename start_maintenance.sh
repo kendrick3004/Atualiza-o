@@ -1,5 +1,23 @@
 #!/bin/bash
 
+# ==============================================================================
+# start_maintenance.sh - Script de Deploy de Manutenção e Repositório Alternativo
+# ==============================================================================
+# Descrição:
+#   Este script realiza um deploy limpando a pasta 'site' e fazendo o download
+#   de uma versão completa a partir de um repositório DIFERENTE do start.sh:
+#   1. Encerra qualquer servidor em execução.
+#   2. Ativa o modo manutenção a partir da pasta 'maintenance'.
+#   3. Remove e recria a pasta 'site'.
+#   4. Executa git clone do repositório secundário (kendrick3004/site.git).
+#   5. Executa a estruturação do banco de dados (generate_assets_structure.py).
+#   6. Desativa o modo manutenção e inicia o servidor principal do site.
+#
+# Diferenças chave vs start.sh:
+#   - start_maintenance.sh: Clona a partir de 'https://github.com/kendrick3004/site.git'.
+#   - start.sh: Clona a partir de 'https://github.com/kendrick3004/Atualiza-o.git'.
+# ==============================================================================
+
 set -u
 
 # Pega o diretório onde o script está localizado (raiz do projeto /index)
@@ -93,6 +111,11 @@ pkill -f main.py >/dev/null 2>&1 || true
 sleep 2
 
 log "🚀 Iniciando servidor principal do site..."
-nohup python3 main.py >> "$SITE_LOG" 2>&1 &
-log "✅ Deploy finalizado. Site online na porta 5000."
+if cd "$BASE_DIR/site"; then
+    nohup python3 main.py >> "$SITE_LOG" 2>&1 &
+    log "✅ Deploy finalizado. Site online na porta 5000."
+else
+    log "❌ Erro ao acessar diretório do site para iniciar o servidor"
+    exit 1
+fi
 log "📊 Logs do dia salvos em: $DIA_LOG_DIR"

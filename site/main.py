@@ -36,10 +36,29 @@ MAINTENANCE_DIR = os.path.join(BASE_DIR, 'maintenance')
 TEMP_DIR = os.path.join(BASE_DIR, '.temp')
 ZIP_DIR = os.path.join(TEMP_DIR, '.zip')
 REPO_DIR = os.path.join(TEMP_DIR, '.repo')
-DATABASE_DIR = os.path.join(BASE_DIR, 'database')
+DATABASE_DIR = os.path.abspath(os.path.join(BASE_DIR, 'database'))
 UPLOAD_FOLDER = os.path.join(DATABASE_DIR, 'files')
 
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
+def redact_ip(ip):
+    """Pseudonimiza o endereço IP para privacidade"""
+    if not ip: return "0.0.0.0"
+    parts = ip.split('.')
+    if len(parts) == 4:
+        return f"{parts[0]}.{parts[1]}.xxx.xxx"
+    return "xxx.xxx.xxx.xxx"
+
+# Sobrescrever log_message do Werkzeug para mascarar IPs nos logs de servidor
+try:
+    from werkzeug.serving import WSGIRequestHandler
+    def new_log_message(self, format, *args):
+        ip = self.address_string()
+        redacted = redact_ip(ip)
+        self.log("info", f"{redacted} - - %s", format % args)
+    WSGIRequestHandler.log_message = new_log_message
+except Exception as e:
+    print(f"⚠️ Aviso: Não foi possível aplicar máscara de IP nos logs do Werkzeug: {e}")
 
 def get_log_file(log_type='site'):
     hoje_str = datetime.date.today().strftime('%Y-%m-%d')
@@ -52,10 +71,6 @@ def get_log_file(log_type='site'):
 def registrar_log(mensagem, log_type='site'):
     """
     Registers a log message in the daily log file.
-    
-    Args:
-        mensagem (str): The message to be logged.
-        log_type (str): The category of the log ('site' or 'database').
     """
     try:
         with open(get_log_file(log_type), 'a', encoding='utf-8') as f:
@@ -76,12 +91,6 @@ def atualizar_linha():
 def generate_structure_json(specific_file=None):
     """
     Executes the external script to generate or update the database structure JSON.
-    
-    Args:
-        specific_file (str, optional): Path to a specific file for incremental update.
-        
-    Returns:
-        bool: True if successful, False otherwise.
     """
     try:
         script_path = os.path.join(DATABASE_DIR, 'generate_assets_structure.py')
@@ -111,16 +120,22 @@ def security_and_tracking():
     
     extensoes_ignoradas = (
         '.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.svg', 
-        '.woff', '.woff2', '.ttf', '.otf', '.json', '.map', '.ico'
+        '.woff', '.woff2', '.ttf', '.otf', '.json', '.map', '.ico', '.webp'
     )
-    # Melhoria: usar caminhos que começam com a pasta para evitar falsos positivos
     pastas_ignoradas = ('/assets/', '/css/', '/js/', '/img/', '/src/', '/maintenance/')
     
     # Verifica se termina com extensão ignorada ou se o caminho começa com uma das pastas ignoradas
     if request.path.endswith(extensoes_ignoradas) or any(request.path.startswith(p) for p in pastas_ignoradas):
         return
 
+    # Filtrar requisições de API que não representam visitas reais
+    api_paths_to_ignore = ('/api/config', '/api/health', '/api/status')
+    if request.path in api_paths_to_ignore:
+        return
+
     client_ip = request.remote_addr
+    redacted_ip = redact_ip(client_ip)
+    
     current_time = time.time()
     if current_time - request_counts[client_ip]['timestamp'] > RATE_LIMIT_PERIOD:
         request_counts[client_ip] = {'count': 1, 'timestamp': current_time}
@@ -140,10 +155,10 @@ def security_and_tracking():
     
     try:
         if request.path.startswith('/database'):
-            registrar_log(f"👤 Acesso Database: {client_ip} -> {request.path}", log_type='database')
+            registrar_log(f"👤 Acesso Database: {redacted_ip} -> {request.path}", log_type='database')
             registrar_log(f"📊 Visitas Total: {visitas_total} | Hoje: {visitas_hoje}", log_type='database')
         else:
-            registrar_log(f"👤 Acesso: {client_ip} -> {request.path}")
+            registrar_log(f"👤 Acesso: {redacted_ip} -> {request.path}")
             atualizar_linha()
     except Exception as e:
         print(f"Erro ao processar logs de acesso: {e}")
@@ -153,7 +168,6 @@ def security_and_tracking():
 def get_frontend_config():
     """
     Endpoint que fornece as variaveis de ambiente necessarias para o frontend.
-    Apenas as chaves publicas (nao sensiveis) sao retornadas.
     """
     config_data = {
         'FIREBASE_API_KEY': os.getenv('FIREBASE_API_KEY', ''),
@@ -166,7 +180,13 @@ def get_frontend_config():
         'FIREBASE_DATABASE_URL': os.getenv('FIREBASE_DATABASE_URL', ''),
         'WEATHER_API_KEY': os.getenv('WEATHER_API_KEY', '')
     }
-    registrar_log(f"📋 Configuracao do frontend solicitada por {request.remote_addr}")
+    # Log reduzido: evitar poluir logs com chamadas frequentes do frontend
+    # Registra apenas a cada 100 chamadas para diagnóstico
+    if not hasattr(get_frontend_config, '_call_count'):
+        get_frontend_config._call_count = 0
+    get_frontend_config._call_count += 1
+    if get_frontend_config._call_count == 1 or get_frontend_config._call_count % 100 == 0:
+        registrar_log(f"📋 Configuracao do frontend solicitada por {redact_ip(request.remote_addr)} (chamada #{get_frontend_config._call_count})")
     return jsonify(config_data), 200
 
 # Configuracao para passar para o routes.py
@@ -180,14 +200,14 @@ config = {
     'UPLOAD_FOLDER': UPLOAD_FOLDER,
     'registrar_log': registrar_log,
     'generate_structure_json': generate_structure_json,
-    'send_error_file': send_error_file
+    'send_error_file': send_error_file,
+    'redact_ip': redact_ip
 }
 
 # Registrar as rotas a partir do arquivo separado
 register_routes(app, config)
 
 if __name__ == '__main__':
-    # Removido generate_structure_json() daqui para acelerar o boot
-    # A estrutura ja e gerada pelo start.sh antes de iniciar o servidor
     print("\n🚀 Servidor ONLINE na porta 5000")
+    # Rodar com debug=False por padrão, conforme relatório
     app.run(host="0.0.0.0", port=5000, debug=False)
