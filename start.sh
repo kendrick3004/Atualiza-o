@@ -25,7 +25,15 @@ set -u
 
 # Carregar variaveis de ambiente do arquivo .env
 if [ -f ".env" ]; then
-    export $(cat .env | xargs)
+    while IFS= read -r line || [ -n "$line" ]; do
+        # Remove espacos no inicio e fim
+        cleaned_line=$(echo "$line" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+        # Pula se for vazio ou comecar com #
+        [[ -z "$cleaned_line" ]] && continue
+        [[ "$cleaned_line" =~ ^# ]] && continue
+        # Exporta a variavel
+        export "$cleaned_line"
+    done < .env
 else
     echo "⚠️ Aviso: Arquivo .env nao encontrado. Algumas funcionalidades podem nao funcionar."
 fi
@@ -105,7 +113,7 @@ mkdir -p "$BASE_DIR/site"
 TEMP_DIR="$BASE_DIR/.temp"
 
 # Nome da pasta do repositório temporário
-TEMP_REPO="$TEMP_DIR/repo"
+TEMP_REPO="$TEMP_DIR/.repo"
 
 # Limpa apenas a clonagem anterior
 rm -rf "$TEMP_REPO"

@@ -150,12 +150,12 @@ function renderFiles() {
         const sortedFiles = sortFiles(files);
         sortedFiles.forEach(file => {
             const card = document.createElement("div");
-            card.className = `file-card ${file.isDirectory ? "directory" : ""} ${selectedFiles.includes(file.id) ? "selected" : ""}`;
+            card.className = `file-card ${file.isDirectory ? "directory" : ""} ${isItemSelected(file.id) ? "selected" : ""}`;
             
             const checkbox = document.createElement("input");
             checkbox.type = "checkbox";
             checkbox.className = "file-checkbox";
-            checkbox.checked = selectedFiles.includes(file.id);
+            checkbox.checked = isItemSelected(file.id);
             card.appendChild(checkbox);
 
             const iconDiv = document.createElement("div");
@@ -197,10 +197,10 @@ function renderFiles() {
         const sortedFiles = sortFiles(files);
         sortedFiles.forEach(file => {
             const tr = document.createElement("tr");
-            if (selectedFiles.includes(file.id)) tr.className = "selected";
+            if (isItemSelected(file.id)) tr.className = "selected";
             const size = file.isDirectory ? getFolderSize(file.id) : file.size;
             tr.innerHTML = `
-                <td><input type="checkbox" ${selectedFiles.includes(file.id) ? "checked" : ""}></td>
+                <td><input type="checkbox" ${isItemSelected(file.id) ? "checked" : ""}></td>
                 <td>${getFileIcon(file, true)} ${file.name}</td>
                 <td>${formatFileSize(size)}</td>
                 <td>${file.modified ? new Date(file.modified).toLocaleDateString() : "-"}</td>

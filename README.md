@@ -1962,3 +1962,19 @@ Este README foi gerado a partir da **análise completa** de todos os arquivos do
   - Corrigidos erros de indentação inconsistente no bloco de inicialização do site em `start.sh` (linhas 247-267).
   - Adicionados cabeçalhos de documentação explicativos em `start.sh`, `start_copy.sh` e `start_maintenance.sh` detalhando seus fluxos de deploy e as diferenças entre eles (como o repositório Git alternativo clonado em `start_maintenance.sh`).
 
+### [2026-05-25 21:15]
+- **Refatoração da Lógica de Seleção de Arquivos e Pastas**:
+  - Implementada seleção inteligente e hierárquica no visualizador do banco de dados (`site/database/js/selection.js`).
+  - **Deduplicação**: Arquivos descendentes de uma pasta selecionada são removidos da lista de IDs explícitos (`selectedFiles`) para evitar uploads ou downloads redundantes (o que causava arquivos duplicados no processamento de ZIP).
+  - **Borbulhamento Recursivo**: Selecionar todos os arquivos (ou o único arquivo) de uma pasta seleciona automaticamente a pasta pai no nível superior.
+  - **Desmarcação Sibling**: Desmarcar um arquivo específico dentro de uma pasta selecionada remove a pasta pai e marca individualmente todos os outros arquivos irmãos para preservar o restante da seleção.
+  - **Melhoria Visual**: O estado do checkbox e realce dos cartões/linhas agora usa a função `isItemSelected(file.id)` em `site/database/js/file-loader.js` para indicar visualmente quando um arquivo está selecionado de forma implícita (herdado de sua pasta pai).
+- **Ajuste no Diretório do Clone Temporário**:
+  - Alterada a variável `TEMP_REPO` em `start.sh` de `$TEMP_DIR/repo` para `$TEMP_DIR/.repo` para alinhar com as regras de caminhos ocultos e ignorados no `.gitignore`.
+- **Correção do Parser de Ambiente no Bash**:
+  - Refatorado o carregamento do arquivo `.env` no script `start.sh` para usar um loop robusto de leitura linha a linha (`while IFS= read -r line`), contornando a falha de comandos como `export $(cat .env | xargs)` que geravam avisos/erros ao encontrar linhas em branco ou comentários com caracteres especiais e espaços.
+- **Configuração do Arquivo `.env`**:
+  - Mantido o arquivo `.env` rastreado no Git para garantir compatibilidade com o fluxo de deploy automatizado via `git clone` no servidor.
+  - Criado o arquivo modelo `.env.example` para documentar a estrutura de variáveis necessárias.
+
+

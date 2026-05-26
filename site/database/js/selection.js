@@ -4,15 +4,122 @@
  * OTIMIZADO: Compactação agora ocorre no servidor para melhor performance
  */
 
+function isItemSelected(id) {
+    return selectedFiles.includes(id) || isContainedInSelectedFolder(id);
+}
+
+function getParentPath(id) {
+    for (const parentPath in fileStructure) {
+        const entry = fileStructure[parentPath];
+        if (entry.files?.some(f => f.id === id) || entry.folders?.some(f => f.id === id)) {
+            return parentPath;
+        }
+    }
+    return null;
+}
+
+function checkAndBubbleSelection(id) {
+    const parentPath = getParentPath(id);
+    if (!parentPath || parentPath === "database_root") return;
+    
+    const parentEntry = fileStructure[parentPath];
+    if (!parentEntry) return;
+
+    const children = [
+        ...(parentEntry.folders || []).map(f => f.id),
+        ...(parentEntry.files || []).map(f => f.id)
+    ];
+
+    if (children.length === 0) return;
+
+    // Verifica se todos os filhos estão selecionados (explícita ou implicitamente)
+    const allChildrenSelected = children.every(childId => isItemSelected(childId));
+
+    if (allChildrenSelected) {
+        // Remove todos os filhos de selectedFiles
+        selectedFiles = selectedFiles.filter(selId => !children.includes(selId));
+        // Adiciona o pai a selectedFiles
+        if (!selectedFiles.includes(parentPath)) {
+            selectedFiles.push(parentPath);
+        }
+        // Verifica recursivamente o pai
+        checkAndBubbleSelection(parentPath);
+    }
+}
+
+function selectItem(id) {
+    if (isItemSelected(id)) return;
+
+    // Como estamos selecionando este item, removemos quaisquer descendentes explicitamente selecionados
+    selectedFiles = selectedFiles.filter(selId => !selId.startsWith(id + '/'));
+
+    selectedFiles.push(id);
+
+    // Borbulha a seleção para os pais
+    checkAndBubbleSelection(id);
+}
+
+function selectSiblingsExcept(folderId, targetId) {
+    const entry = fileStructure[folderId];
+    if (!entry) return;
+    const children = [
+        ...(entry.folders || []),
+        ...(entry.files || [])
+    ];
+    for (const child of children) {
+        if (child.id === targetId) {
+            continue;
+        }
+        if (targetId.startsWith(child.id + '/')) {
+            // O alvo de desmarcação está dentro desta pasta, entra recursivamente para selecionar seus irmãos
+            selectSiblingsExcept(child.id, targetId);
+        } else {
+            // Arquivo/pasta irmão do caminho do alvo, mantém selecionado
+            if (!selectedFiles.includes(child.id)) {
+                selectedFiles.push(child.id);
+            }
+        }
+    }
+}
+
+function deselectItem(id) {
+    const idx = selectedFiles.indexOf(id);
+    if (idx !== -1) {
+        selectedFiles.splice(idx, 1);
+        // Também remove descendentes, por segurança
+        selectedFiles = selectedFiles.filter(selId => !selId.startsWith(id + '/'));
+        return;
+    }
+
+    // Se estiver selecionado implicitamente, encontra o ancestral que está em selectedFiles
+    let ancestorId = null;
+    for (const selId of selectedFiles) {
+        if (id.startsWith(selId + '/')) {
+            ancestorId = selId;
+            break;
+        }
+    }
+
+    if (ancestorId) {
+        const aIdx = selectedFiles.indexOf(ancestorId);
+        if (aIdx !== -1) {
+            selectedFiles.splice(aIdx, 1);
+        }
+        selectSiblingsExcept(ancestorId, id);
+    }
+}
+
 function toggleSelection(id) {
-    const index = selectedFiles.indexOf(id);
-    if (index === -1) selectedFiles.push(id);
-    else selectedFiles.splice(index, 1);
+    if (isItemSelected(id)) {
+        deselectItem(id);
+    } else {
+        selectItem(id);
+    }
     renderFiles();
 }
 
 function selectAll() {
-    selectedFiles = files.map(f => f.id);
+    files.forEach(f => selectItem(f.id));
     renderFiles();
 }
 
